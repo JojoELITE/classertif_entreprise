@@ -5,7 +5,7 @@ const Tableau = [
     { info: 'Offres d’emploi', link: 'Offres d’emploi' },
   
 ];
-const ChangePage = ({ onSelect }: any) => {
+const Tabs = ({ onSelect }: any) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     const handleClick = (index: number, link: string) => {
@@ -19,7 +19,7 @@ const ChangePage = ({ onSelect }: any) => {
                 {Tableau.map((item, index) => (
                     <div
                         key={index}
-                        className={`relative  flex  text-nowrap  font-bold cursor-pointer px-3 ${selectedIndex === index ? "text-[#472df1] font-bold" : "text-gray-500"}`}
+                        className={`relative  flex  text-nowrap  font-bold cursor-pointer py-4 px-4 ${selectedIndex === index ? "text-[#472df1] font-bold" : "text-gray-500"}`}
                         onClick={() => handleClick(index, item.link)}
                     >
                         {item.info}
@@ -35,4 +35,4 @@ const ChangePage = ({ onSelect }: any) => {
     );
 };
 // 
-export default ChangePage
+export default Tabs

@@ -1,5 +1,7 @@
 import React from 'react';
-import ChangePage from '../ChangePage/page';
+import Tabs from './tabs';
+import Divider from './Divider';
+
 
 export default function SectionHeroDetails() {
   return (
@@ -26,7 +28,8 @@ export default function SectionHeroDetails() {
           <button className='bg-[#edf0ff]  border  px-2  rounded  text-xs text-[#4b32f3]'>Finance</button>
         </div>
       </div>
-      <ChangePage/>
+      <Tabs/>
+      <Divider/>
     </div>
   );
 }
