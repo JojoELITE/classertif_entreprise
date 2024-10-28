@@ -55,7 +55,7 @@ export default function Component(): JSX.Element {
                   <input
                     type="text"
                     placeholder="Rechercher"
-                    className="pl-10 w-full py-1 text-xs border rounded-full focus:outline-none"
+                    className="pl-10 w-full py-1 text-xs border border-black/50 rounded-full focus:outline-none"
                     autoFocus
                   />
                 </div>
