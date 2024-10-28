@@ -1,9 +1,10 @@
 import React from 'react';
+import ChangePage from '../ChangePage/page';
 
 export default function SectionHeroDetails() {
   return (
-    <div className='flex flex-col gap-5'>
-      <div className='h-full w-full'>
+    <div className='flex flex-col gap-9'>
+      <div className='relative h-full w-full'>
         <img 
           src="/image/group.jpeg" 
           style={{ 
@@ -11,20 +12,21 @@ export default function SectionHeroDetails() {
             height: 'auto',  
             maxHeight: '40vh' 
           }} 
-          alt="Description" 
+          alt="Vue d'une entreprise" 
         />
-      </div>
-      <div className='h-36  w-36 rounded border  absolute top-48 left-9 shadow-lg bg-white flex items-center justify-center '>
-        <span>Mazars</span>
-      </div>
-      <div className='flex flex-col gap-1'>
-        <span>Mazars</span>
-        <div className='flex gap-3'>
-          <button>Conseil</button>
-          <button>Comptabilité / Gestion</button>
-          <button>Finance</button>
+        <div className='absolute top-52 left-12 h-36 w-36 rounded border shadow-lg bg-white flex items-center justify-center'>
+          <span className='font-bold text-lg'>Mazars</span>
         </div>
       </div>
+      <div className=' pl-56 flex flex-col gap-1'>
+        <h2 className='text-xl font-semibold'>Mazars</h2>
+        <div className='flex gap-3'>
+          <button className='bg-[#edf0ff] border  px-2  rounded text-xs  text-[#4b32f3]'>Conseil</button>
+          <button className='bg-[#edf0ff] border   px-2  rounded  text-xs text-[#4b32f3]'>Comptabilité / Gestion</button>
+          <button className='bg-[#edf0ff]  border  px-2  rounded  text-xs text-[#4b32f3]'>Finance</button>
+        </div>
+      </div>
+      <ChangePage/>
     </div>
   );
 }
