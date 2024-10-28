@@ -1,13 +1,13 @@
-import SectionHero from "@/components/listEntreprise/SectionHero";
+import React from 'react'
 
-export default function Home() {
+
+function Page() {
+
   return (
-    <div className="">
-    
-
-      <SectionHero/>
-      <div>Page</div>
-   
+    <div>
+      Page
     </div>
-  );
+  )
 }
+
+export default Page
