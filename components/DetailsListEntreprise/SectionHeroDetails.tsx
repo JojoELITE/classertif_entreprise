@@ -14,8 +14,16 @@ export default function SectionHeroDetails() {
           alt="Description" 
         />
       </div>
-      <div className='h-20  w-20 rounded border  absolute top-60 pl-12 shadow-lg bg-white flex items-center justify-center animate-pulse'>
+      <div className='h-36  w-36 rounded border  absolute top-48 left-9 shadow-lg bg-white flex items-center justify-center '>
         <span>Mazars</span>
+      </div>
+      <div className='flex flex-col gap-1'>
+        <span>Mazars</span>
+        <div className='flex gap-3'>
+          <button>Conseil</button>
+          <button>Comptabilité / Gestion</button>
+          <button>Finance</button>
+        </div>
       </div>
     </div>
   );
