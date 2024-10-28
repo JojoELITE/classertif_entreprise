@@ -10,6 +10,12 @@ export default function Divider() {
       </div>
       <div style={{ width: "35% " }}>
         <Right />
+        <div className="flex py-9 justify-between">
+           <div> <h1 className="font-extrabold text-xl">Derniers jobs</h1></div>
+           <div>
+            <span className="text-xs underline">Voir les dernières offres</span>
+           </div>
+        </div>
       </div>
     </div>
   );
