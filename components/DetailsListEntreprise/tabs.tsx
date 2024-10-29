@@ -20,7 +20,7 @@ const Tabs: React.FC<TabsProps> = ({ onSelect }) => {
     };
 
     return (
-        <div className='w-full  top-20 px-3'>
+        <div className='w-full  top-20 lg:px-14'>
             <div className='flex gap-[11px]'>
                 {Tableau.map((item, index) => (
                     <div

@@ -48,7 +48,7 @@ export default function Divider() {
 
         {/* Second Localisation section */}
         <div className=" py-5 hidden md:flex  justify-between">
-          <div className="items-center gap-1">
+          <div className=" flex items-center gap-1">
             <h1 className="font-extrabold text-xl">Localisation</h1>
             <IoPinOutline />
           </div>
