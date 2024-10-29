@@ -1,24 +1,17 @@
 import React, { useState } from "react";
 import { MapPin } from "lucide-react";
 
-export default function RechercheWithHelp() {
+export default function RechecheContrat() {
   const [showInput, setShowInput] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
 
   const options = [
-    "conseil",
-    "finance / assurance",
-    "fiscalite / juridique",
-    "Conseil",
-    "Finance / Assurance",
-    "Fiscalité / Juridique",
-    "IT / Tech / Produit",
-    "Marketing / Communication ",
-    "Media / Edition",
-    "/ Digital",
-    "Ressources humaines",
-    "Service & Relation clients",
+    "Alternance",
+    "CDI",
+    "CDD",
+    "proffessionnalite",
+    "Stage",
   ];
 
   const handleInputFocus = () => setShowInput(true);
@@ -45,7 +38,7 @@ export default function RechercheWithHelp() {
         className="flex w-full items-center px-4 py-2 border rounded-md cursor-pointer"
       >
         <MapPin className="text-gray-400 w-5 h-5 mr-2" />
-        <span className="text-gray-400">tout type de profession</span>
+        <span className="text-gray-400">tout type de contrat</span>
       </div>
 
       {showInput && (
