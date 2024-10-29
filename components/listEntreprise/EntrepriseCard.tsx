@@ -112,6 +112,7 @@ const enterprisesData: EnterpriseData[] = [
   },
 ];
 
+// SVG Icons
 const icons = {
   industry: (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-3 h-3">
@@ -198,15 +199,15 @@ export default function EnterpriseCards() {
   };
 
   return (
-    <div className="w-full px-4 py-[26%] lg:py-0">
+    <div className="w-full px-4 lg:px-10 py-[26%] lg:py-0">
       <div className="flex w-full flex-row flex-wrap items-center justify-between mb-8">
-        <h1 className="text-lg font-bold text-black">43 entreprises disponibles</h1>
+        <h1 className="text-xl font-bold text-black">43 entreprises disponibles</h1>
         <div className="flex items-center space-x-2">
-          <span className="text-sm lg:text-sm text-gray-600">sélection &apos;à la une&apos;</span>
+          <span className="text-lg text-gray-600">sélection &apos;à la une&apos;</span>
           <Switch />
         </div>
       </div>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
         {enterprisesData.slice(0, visibleCount).map(enterprise => (
           <EnterpriseCard key={enterprise.id} enterprise={enterprise} />
         ))}
