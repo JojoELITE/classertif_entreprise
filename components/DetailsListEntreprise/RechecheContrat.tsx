@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MapPin } from "lucide-react";
+import { FaAngleRight } from "react-icons/fa6";
 
 export default function RechecheContrat() {
   const [showInput, setShowInput] = useState(false);
@@ -10,7 +11,7 @@ export default function RechecheContrat() {
     "Alternance",
     "CDI",
     "CDD",
-    "proffessionnalite",
+    "professionalité",
     "Stage",
   ];
 
@@ -43,7 +44,6 @@ export default function RechecheContrat() {
 
       {showInput && (
         <div className="absolute left-0 right-0 mt-2 bg-white border rounded-md shadow-md p-2">
-          {/* <Search className="absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" /> */}
           <input
             type="text"
             placeholder=""
@@ -54,15 +54,18 @@ export default function RechecheContrat() {
           />
           <div className="mt-2">
             {filteredOptions.map((option) => (
-              <label key={option} className="flex items-center">
-                <input
-                  type="checkbox"
-                  checked={selectedOptions.includes(option)}
-                  onChange={() => handleCheckboxChange(option)}
-                  className="mr-2"
-                />
-                {option}
-              </label>
+              <div key={option} className="flex items-center justify-between py-1">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={selectedOptions.includes(option)}
+                    onChange={() => handleCheckboxChange(option)}
+                    className="mr-2"
+                  />
+                  {option}
+                </label>
+                <FaAngleRight />
+              </div>
             ))}
           </div>
         </div>
