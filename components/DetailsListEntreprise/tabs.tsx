@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Tableau = [
     { info: 'Présentation', link: 'Présentation' },
-    { info: 'Offres d’emploi', link: 'Offres d’emploi', count: 25 }, // Exemple de nombre
+    { info: 'Offres d’emploi', link: 'Offres', count: 390 }, // Exemple de nombre
 ];
 
 
@@ -20,7 +20,7 @@ const Tabs: React.FC<TabsProps> = ({ onSelect }) => {
     };
 
     return (
-        <div className='w-full px-12'>
+        <div className='w-full  top-20 px-3'>
             <div className='flex gap-[11px]'>
                 {Tableau.map((item, index) => (
                     <div
@@ -31,7 +31,7 @@ const Tabs: React.FC<TabsProps> = ({ onSelect }) => {
                         <div className="flex gap-4 items-center justify-center">
                             {item.info}
                             {item.count !== undefined && (
-                                <div className={`rounded px-2 ${selectedIndex === index ? "bg-blue-500" : "bg-gray-300"} text-white`}>
+                                <div className={`rounded px-2 ${selectedIndex === index ? "bg-[#dee2ff] text-[#8e84f9]" : "bg-gray-300"} text-white`}>
                                     {item.count}
                                 </div>
                             )}

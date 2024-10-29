@@ -4,7 +4,7 @@ export default function CardGeo() {
 
 
   return (
-    <div>
+    <div className='p-5'>
       <iframe
         width="410"
         height="350"
