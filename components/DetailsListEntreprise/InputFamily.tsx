@@ -1,6 +1,8 @@
 import React from 'react';
 import InputLoookingFor from './InputLoookingFor';
 import RechercheWithHelp from './RechercheWithHelp';
+import RechecheContrat from './RechecheContrat';
+import RechecheDepartementOrVille from './RechecheDepartementOrVille';
 
 export default function InputFamily() {
   return (
@@ -8,8 +10,8 @@ export default function InputFamily() {
       <InputLoookingFor />
       <div className='flex flex-col md:flex-row p-5 md:flex-grow gap-9'>
         <RechercheWithHelp />
-        <RechercheWithHelp />
-        <RechercheWithHelp />
+        <RechecheContrat />
+        <RechecheDepartementOrVille />
       </div>
     </div>
   );
