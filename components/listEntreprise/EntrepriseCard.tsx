@@ -152,13 +152,13 @@ function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
           <div className="space-y-1 mt-3">
 
             <div className='flex gap-1'>
-              <div className="bg-gray-100 flex items-center gap-1 rounded-md w-[50%] px-3 py-1 text-[10px] hover:text-[#5138EE] font-medium">
+              <div className="bg-gray-100 flex items-center gap-1 rounded-md w-full px-3 py-1 text-[10px] hover:text-[#5138EE] font-medium">
                 {icons.industry}
                 {enterprise.industry}
               </div>
 
               {enterprise.location && (
-                <div className="flex items-center gap-1 rounded-md truncate w-[45%] bg-gray-100 border-gray-300 px-3 py-1 text-[10px] hover:text-[#5138EE] font-medium">
+                <div className="flex items-center gap-1 rounded-md truncate w-full bg-gray-100 border-gray-300 px-3 py-1 text-[10px] hover:text-[#5138EE] font-medium">
                   <MapPin className="w-3 h-3" />
                   {enterprise.location}
                 </div>
