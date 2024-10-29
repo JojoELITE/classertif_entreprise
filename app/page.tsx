@@ -11,7 +11,7 @@ function Page() {
       <SectionHero />
 
 
-      <div className="w-full py-32 ">
+      <div className="w-full py-52 ">
           <EntrepriseCard />
         </div>
     </div>
