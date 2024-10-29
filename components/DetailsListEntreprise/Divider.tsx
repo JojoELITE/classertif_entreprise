@@ -17,13 +17,13 @@ export default function Divider() {
       </div>
       <div className="lg:w-1/3">
         <Right />
-        <div className="hidden md:flex py-5 justify-between">
+        <div className="hidden md:flex pt-8 justify-between">
           <h1 className="font-extrabold text-xl">Derniers jobs</h1>
           <span className="text-xs underline text-black">
             Voir les dernières offres
           </span>
         </div>
-        <div className="flex py-5 justify-between">
+        <div className="flex md:hidden lg:py-5 py-0 justify-between">
           <h1 className="font-extrabold text-xl">Localisation</h1>
           <span className="text-xs underline text-black">
           1 Rue de Hanovre, 92290 <br /> Châtenay-Malabry, France
