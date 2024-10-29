@@ -29,7 +29,6 @@ export default function Component(): JSX.Element {
             </h1>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              {/* Recherche principale */}
               <div className="flex-grow relative basis-[30%] border rounded-md focus-within:ring focus-within:ring-black/30">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -39,7 +38,6 @@ export default function Component(): JSX.Element {
                 />
               </div>
 
-              {/* Bouton localisation et champ conditionnel */}
               <div className="flex-grow relative">
                 <button
                   onClick={handleClick}
@@ -62,13 +60,11 @@ export default function Component(): JSX.Element {
                 )}
               </div>
 
-              {/* Bouton de recherche */}
               <Button className="bg-[#5138EE] hover:bg-[#4128DE] text-white font-semibold py-2 px-6">
                 Rechercher
               </Button>
             </div>
 
-            {/* Lien de recherche avancée */}
             <div className="flex items-center gap-2 justify-center mt-6">
               <SlidersHorizontal size={12} />
               <Link href={""} className="text-sm underline">

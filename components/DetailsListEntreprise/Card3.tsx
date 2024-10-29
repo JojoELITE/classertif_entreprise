@@ -7,7 +7,7 @@ import { IoMdGlobe } from "react-icons/io";
 import { TbBadge } from "react-icons/tb";
 export default function Card() {
   return (
-    <div className="flex justify-between border rounded h-full font-extrabold text-[#333333] p-3 w-full">
+    <div className="flex p-5 justify-between border rounded h-full font-extrabold text-[#333333] lg:p-3 w-full">
       <div className="flex flex-col">
         <div className="flex items-center justify-center gap-9">
           <div>
@@ -47,8 +47,8 @@ export default function Card() {
               </div>
             </div>
           </div>
-          <div className="h-20 w-12  flex items-center justify-center">
-            <FaAngleRight   />
+          <div className="h-20 w-12  sm:pl-24 lg:pl-0 flex items-center justify-center">
+            <FaAngleRight />
           </div>
         </div>
       </div>
