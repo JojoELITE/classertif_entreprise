@@ -1,7 +1,10 @@
-import EntrepriseCard from "@/components/listEntreprise/EntrepriseCard";
-import SectionHero from "@/components/listEntreprise/SectionHero";
+import EntrepriseCard from '@/components/listEntreprise/EntrepriseCard'
+import SectionHero from '@/components/listEntreprise/SectionHero'
+import React from 'react'
 
-export default function Home() {
+
+function Page() {
+
   return (
     <div className="">
 
@@ -12,5 +15,7 @@ export default function Home() {
           <EntrepriseCard />
         </div>
     </div>
-  );
+  )
 }
+
+export default Page
