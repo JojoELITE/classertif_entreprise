@@ -22,8 +22,6 @@ export default function Component(): JSX.Element {
           className="h-[300px] w-full object-cover object-center"
         />
 
-
-
         <div className="absolute z-10 flex flex-col items-center justify-center top-[80%] w-full px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-full bg-white rounded-xl shadow-lg p-6">
             <h1 className="text-2xl sm:text-3xl font-bold text-[#5138EE] mb-6 ">
