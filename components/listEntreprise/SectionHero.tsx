@@ -21,7 +21,6 @@ export default function Component(): JSX.Element {
         height={0}
         quality={75}
       />
-
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-[70%] bg-white rounded-xl shadow-lg p-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-[#5138EE] mb-6 text-center">
