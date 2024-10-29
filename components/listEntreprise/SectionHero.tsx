@@ -19,20 +19,18 @@ export default function Component(): JSX.Element {
           width={1000}
           height={0}
           alt="Vue d'une entreprise"
-          className="h-[500px] w-full object-cover object-center"
+          className="h-[300px] w-full object-cover object-center"
         />
 
-
-
         <div className="absolute z-10 flex flex-col items-center justify-center top-[80%] w-full px-4 sm:px-6 lg:px-8">
-          <div className="w-full max-w-[60%] bg-white rounded-xl shadow-lg p-6">
+          <div className="w-full max-w-full bg-white rounded-xl shadow-lg p-6">
             <h1 className="text-2xl sm:text-3xl font-bold text-[#5138EE] mb-6 ">
               Trouver l&apos;entreprise qui vous correspond
             </h1>
 
             <div className="flex flex-col sm:flex-row gap-4">
               {/* Recherche principale */}
-              <div className="flex-grow relative basis-[40%] border rounded-md focus-within:ring focus-within:ring-black/30">
+              <div className="flex-grow relative basis-[30%] border rounded-md focus-within:ring focus-within:ring-black/30">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -71,7 +69,7 @@ export default function Component(): JSX.Element {
             </div>
 
             {/* Lien de recherche avancée */}
-            <div className="flex items-center gap-2 px-[40%] mt-6">
+            <div className="flex items-center gap-2 justify-center mt-6">
               <SlidersHorizontal size={12} />
               <Link href={""} className="text-sm underline">
                 Recherche avancée
