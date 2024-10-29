@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Switch } from "@/components/ui/switch"
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface EnterpriseData {
   id: number
@@ -106,7 +107,7 @@ function EntrepriseCard({ enterprise }: { enterprise: EnterpriseData }) {
       <CardHeader className="p-0 relative">
         <div className="h-28 overflow-hidden ">
           <div>
-            <img className=" object-cover object-center w-full h-full" src={enterprise.coverImage} alt="Cover" />
+            <Image className=" object-cover object-center w-full h-full" src={enterprise.coverImage} alt="Cover" width={1000} height={100}/>
 
           </div>
           <div className="absolute bottom-0 left-4 transform translate-y-1/2">
@@ -151,7 +152,7 @@ export default function EnterpriseCards() {
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-md lg:text-2xl font-bold text-gray-800">43 entreprises disponibles</h1>
         <div className="flex items-center space-x-2">
-          <span className="text-xs lg:text-sm text-gray-600">sélection "à la une"</span>
+          <span className="text-xs lg:text-sm text-gray-600">sélection &apos;à la une&apos;</span>
           <Switch />
         </div>
       </div>
