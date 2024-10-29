@@ -1,14 +1,10 @@
 "use client"; // Ensure this is marked as a Client Component
 import React from "react";
-import Tabs from "./tabs";
-import Divider from "./Divider";
 import Image from "next/image"; // Importing Image from Next.js
 import MyComponent from "./change-ing";
 
 export default function SectionHeroDetails() {
-  const handleTabSelect = (link: string) => {
-    console.log(`Selected tab: ${link}`);
-  };
+ 
 
   return (
     <div className="flex flex-col gap-9 h-full">
