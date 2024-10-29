@@ -112,7 +112,6 @@ const enterprisesData: EnterpriseData[] = [
   },
 ];
 
-// SVG Icons
 const icons = {
   industry: (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-3 h-3">
@@ -127,9 +126,10 @@ const icons = {
   ),
 };
 
+
 function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
   return (
-    <Card className="bg-white shadow-sm rounded-xl hover:shadow-lg overflow-hidden border border-gray-200">
+    <Card className="bg-white shadow-sm rounded-xl hover:shadow-lg overflow-hidden border border-gray-200 flex flex-col">
       
       <CardHeader className="p-0 relative">
         <div className="h-28 overflow-hidden">
@@ -145,7 +145,7 @@ function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
         </div>
       </CardHeader>
 
-      <CardContent className="pt-16 px-4">
+      <CardContent className="pt-16 px-4 flex-grow">
         <Link href={""} className='hover:text-[#5138EE]'>
           <h2 className="font-bold text-xl">{enterprise.name}</h2>
 
@@ -185,6 +185,7 @@ function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
     </Card>
   );
 }
+
 
 export default function EnterpriseCards() {
   const initialVisibleCount = 3;
