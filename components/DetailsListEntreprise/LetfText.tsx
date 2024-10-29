@@ -2,7 +2,7 @@ import React from "react";
 
 export default function LetfText() {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col p-5 gap-5">
       <h1 className="font-extrabold text-xl">Présentation</h1>
 
       <div className="flex flex-col gap-5">
