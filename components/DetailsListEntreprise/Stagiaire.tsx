@@ -1,17 +1,20 @@
 import React from "react";
 import StagiaireHERO from "./StagiaireHERO";
 import Information from "./Information";
+import { RiShareBoxFill } from "react-icons/ri";
 import CardGeo from "./CardGeo";
 import { FaClock } from "react-icons/fa6";
 import Share from "./Share";
 import Fonction from "./Fonction";
+import Navbar from "./Navbar";
 
 export default function Stagiaire() {
   return (
     <div>
       <StagiaireHERO />
-      <div className="flex gap-12 py-14 p-5 ">
+      <div className="flex flex-col lg:flex-row lg:gap-12 lg:py-14 lg:p-5 sm:gap-5">
         <div className="flex flex-col" style={{ width: "70%" }}>
+        <Navbar />
           <h1 className="font-semibold text-xl px-6">Qui sommes-nous?</h1>
           <div className="px-6">
             <p className="py-9">
@@ -31,8 +34,8 @@ export default function Stagiaire() {
           <div className="pt-7">
             <h1 className="font-semibold text-xl px-6">Description du poste</h1>
             <p className="py-9 px-6">
-              Dans le cadre du développement de ses activités, le département
-              Forensic Investigation Services de Forvis Mazars accueille des
+              Dans le cadre du développement de ses activités, le département,
+                <i className="font-extrabold">Forensic Investigation Services </i> de Forvis Mazars accueille des
               stagiaires ayant vocation à être pleinement intégrés au sein de
               ses équipes opérationnelles. Vous rejoindrez notre équipe Forensic
               Investigation et Litigation en pleine croissance, constituée de
@@ -121,8 +124,9 @@ export default function Stagiaire() {
           <br />
         </div>
         <div className="" style={{ width: "30%" }}>
-          <div className="flex items-center sticky border rounded bg-blue-800 text-white py-2 justify-center">
+          <div className="flex items-center sticky border rounded font-bold bg-[#472df1] gap-2 text-white py-2 justify-center">
             <button>Postuler</button>
+            <RiShareBoxFill />
           </div>
           <div className="py-7">
           <Fonction/>

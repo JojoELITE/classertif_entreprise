@@ -1,9 +1,8 @@
 import React from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { IoMdTime } from "react-icons/io";
-import { BriefcaseBusiness, GraduationCap } from "lucide-react";
+import { BriefcaseBusiness, GraduationCap, Tag } from "lucide-react";
 import { IoMdGlobe } from "react-icons/io";
-import { TbBadge } from "react-icons/tb";
 
 export default function  Stagiaire1() {
  
@@ -20,7 +19,7 @@ export default function  Stagiaire1() {
             <div className="flex flex-col md:flex-row gap-3 mt-4">
               <div className="flex gap-3">
                 <button className="bg-[#f4f4f4]  text-xs flex gap-1 items-center justify-center px-2 transition-colors">
-                  <TbBadge size={15} color="grey" />
+                  <Tag size={15} color="grey" />
                   CDI
                 </button>
                 <button className="bg-[#f4f4f4]  gap-2 border text-nowrap text-xs flex items-center justify-center px-2 transition-colors">

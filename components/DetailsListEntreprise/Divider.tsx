@@ -4,9 +4,7 @@ import { FaAngleDown } from "react-icons/fa6";
 import Right from "./Right";
 import Card1 from "./Card1";
 import { IoPinOutline } from "react-icons/io5";
-import Card2 from "./Card2";
 import { FaClock } from "react-icons/fa";
-import Card3 from "./Card3";
 import CardGeo from "./CardGeo";
 
 export default function Divider() {
@@ -42,8 +40,6 @@ export default function Divider() {
         </div>
         <div className="flex flex-col py-12 gap-3">
           <Card1 />
-          <Card2 />
-          <Card3 />
         </div>
 
         {/* Second Localisation section */}
