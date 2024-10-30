@@ -9,7 +9,7 @@ export default function Share() {
   return (
     <div className=" w-full  rounded border  py-5">
       <div className="flex flex-col gap-3">
-        <h1 className="text-center">Partager l'offre d'emploi</h1>
+        <h1 className="text-center">Partager  l&apos;offre d&apos;emploi</h1>
         <div className="flex gap-3 justify-center">
           <div className="flex items-center justify-center p-2">
             <div className="rounded border border-gray-300 p-2 bg-white">
