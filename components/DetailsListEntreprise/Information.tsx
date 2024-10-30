@@ -4,8 +4,8 @@ import { AiOutlineWoman } from "react-icons/ai";
 export default function Information() {
   return (
     <div className='flex flex-col p-5'>
-      <div className='border rounded sm:[290px] lg:h-[310px] w-full bg-[#edf0ff]'>
-        <h1 className='text-[#3927ac] font-extrabold text-xl pl-4 text-nowrap  py-4'>Informations générales</h1>
+      <div className='border rounded sm:[290px] lg:h-[310px] w-full '>
+        <h1 className=' font-extrabold text-xl pl-4 text-nowrap  py-4'>Informations générales</h1>
         <div className='flex gap-7 px-4'>
           <div className=' text-[#8e8f90]'>
             <p className='mb-2'><strong>Création</strong></p>
@@ -15,7 +15,7 @@ export default function Information() {
             <p className='mb-2'><strong>Âge moyen</strong></p>
             <p className='mb-2'><strong>Parité</strong></p>
           </div>
-          <div className=' text-[#462cd6]'>
+          <div className=' '>
             <p className='mb-2'>1945</p>
             <p className='mb-5'>1 Rue de Hanovre, 92290 Châtenay-Malabry, France</p>
             <p className='mb-2'>🇫🇷 Français</p>

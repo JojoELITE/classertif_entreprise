@@ -4,6 +4,7 @@ import Information from "./Information";
 import CardGeo from "./CardGeo";
 import { FaClock } from "react-icons/fa6";
 import Share from "./Share";
+import Fonction from "./Fonction";
 
 export default function Stagiaire() {
   return (
@@ -85,8 +86,9 @@ export default function Stagiaire() {
               </li>
             </ul>
           </div>
+       
+          <div className="pt-5" >
           <hr />
-          <div className="">
             <ul className="px-5 pt-8 flex flex-col gap-4 w-full">
               <h1 className="font-semibold text-xl px-6">Avantages</h1>
               <li className="flex justify-between px-5">
@@ -122,7 +124,11 @@ export default function Stagiaire() {
           <div className="flex items-center sticky border rounded bg-blue-800 text-white py-2 justify-center">
             <button>Postuler</button>
           </div>
+          <div className="py-7">
+          <Fonction/>
+          </div>
           <Information />
+         
           <div className="flex px-5 pt-5 justify-between">
             <span>
               <strong>Localisation</strong>
