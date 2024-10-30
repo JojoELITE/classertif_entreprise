@@ -5,7 +5,27 @@ import { IoMdTime } from "react-icons/io";
 import { BriefcaseBusiness, GraduationCap, Tag } from "lucide-react";
 import { IoMdGlobe } from "react-icons/io";
 
-const Card = ({ jobTitle, location, contractType, diplomaRequired, experience, time, remote, onClick }:any) => {
+interface CardProps {
+  jobTitle: string;
+  location: string;
+  contractType: string;
+  diplomaRequired: string;
+  experience: string;
+  time: string;
+  remote: string;
+  onClick: () => void;
+}
+
+const Card: React.FC<CardProps> = ({
+  jobTitle,
+  location,
+  contractType,
+  diplomaRequired,
+  experience,
+  time,
+  remote,
+  onClick,
+}) => {
   return (
     <div onClick={onClick} className="group cursor-pointer flex p-5 hover:text-blue-400 justify-between border rounded h-full font-extrabold text-[#333333] lg:p-3 w-full">
       <div className="flex flex-col sm:flex-col md:flex-row">
@@ -54,7 +74,7 @@ const Card = ({ jobTitle, location, contractType, diplomaRequired, experience, t
   );
 };
 
-const JobCards = () => {
+const JobCards: React.FC = () => {
   const handleNavigation = () => {
     window.location.href = '/pages/detailsJob'; 
   };
@@ -67,7 +87,7 @@ const JobCards = () => {
         location="Honguemare-Guenouville, France"
         contractType="CDI"
         diplomaRequired="Sans diplôme"
-        experience="&lt;1 an"
+        experience="<1 an"
         time="Temps partiel"
         remote="Pas de télétravail"
       />
@@ -77,30 +97,29 @@ const JobCards = () => {
         location="Honguemare-Guenouville, France"
         contractType="CDI"
         diplomaRequired="Sans diplôme"
-        experience="&lt;1 an"
+        experience="<1 an"
         time="Temps partiel"
         remote="Pas de télétravail"
       />
-        <Card
+       <Card
         onClick={() => console.log("Clicked Etudiant Card")}
         jobTitle="Equipier Polyvalent Etudiant (H/F)"
         location="Honguemare-Guenouville, France"
         contractType="CDI"
         diplomaRequired="Sans diplôme"
-        experience="&lt;1 an"
+        experience="<1 an"
         time="Temps partiel"
         remote="Pas de télétravail"
-      />
-        <Card
-        onClick={() => console.log("Clicked Etudiant Card")}
-        jobTitle="Equipier Polyvalent Etudiant (H/F)"
-        location="Honguemare-Guenouville, France"
-        contractType="CDI"
-        diplomaRequired="Sans diplôme"
-        experience="&lt;1 an"
-        time="Temps partiel"
-        remote="Pas de télétravail"
-      />
+      />  <Card
+      onClick={() => console.log("Clicked Etudiant Card")}
+      jobTitle="Equipier Polyvalent Etudiant (H/F)"
+      location="Honguemare-Guenouville, France"
+      contractType="CDI"
+      diplomaRequired="Sans diplôme"
+      experience="<1 an"
+      time="Temps partiel"
+      remote="Pas de télétravail"
+    />
     </>
   );
 };
