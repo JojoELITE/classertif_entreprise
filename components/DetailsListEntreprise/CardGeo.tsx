@@ -6,7 +6,7 @@ export default function CardGeo() {
   return (
     <div className='p-5'>
       <iframe
-        width="410"
+        width="330"
         height="350"
         style={{ border: 0 }}
         loading="lazy"
