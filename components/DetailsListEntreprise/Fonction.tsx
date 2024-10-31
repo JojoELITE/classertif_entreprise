@@ -9,7 +9,7 @@ import Fonction from "./Fonction";
 import Navbar from "./Navbar";
 import { useParams } from "next/navigation";
 import enterprisesData from "@/components/data/data";
-import EnterpriseCards from "../listEntreprise/EntrepriseCard";
+// import EnterpriseCards from "../listEntreprise/EntrepriseCard";
 
 export default function Stagiaire() {
   const { id } = useParams(); 
