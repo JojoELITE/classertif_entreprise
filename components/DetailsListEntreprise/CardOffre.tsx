@@ -4,6 +4,8 @@ import { CiLocationOn } from "react-icons/ci";
 import { IoMdTime } from "react-icons/io";
 import { BriefcaseBusiness, GraduationCap, Tag } from "lucide-react";
 import { IoMdGlobe } from "react-icons/io";
+import { useParams, useRouter } from "next/navigation"; // Importer useRouter
+import enterprisesData from "@/components/data/data"; // Assurez-vous que le chemin est correct
 
 interface CardProps {
   jobTitle: string;
@@ -13,6 +15,7 @@ interface CardProps {
   experience: string;
   time: string;
   remote: string;
+  jobId: number;
   onClick: () => void;
 }
 
@@ -27,7 +30,10 @@ const Card: React.FC<CardProps> = ({
   onClick,
 }) => {
   return (
-    <div onClick={onClick} className="group cursor-pointer flex p-5 hover:text-blue-400 justify-between border rounded h-full font-extrabold text-[#333333] lg:p-3 w-full">
+    <div 
+      onClick={onClick} 
+      className="group cursor-pointer flex p-5 hover:text-blue-400 justify-between border rounded h-full font-extrabold text-[#333333] lg:p-3 w-full"
+    >
       <div className="flex flex-col sm:flex-col md:flex-row">
         <div className="flex items-center justify-center gap-9">
           <div>
@@ -75,54 +81,41 @@ const Card: React.FC<CardProps> = ({
 };
 
 const JobCards: React.FC = () => {
-  const handleNavigation = () => {
-    window.location.href = '/pages/detailsJob'; 
+  const { id } = useParams(); 
+  const router = useRouter();
+  
+  // Recherche de l'entreprise correspondant à l'ID
+  const enterprise = enterprisesData.enterprisesData.find(ent => ent.id.toString() === id);
+
+  // Vérification de l'existence de l'entreprise
+  if (!enterprise) {
+    return <div>Entreprise non trouvée</div>;
+  }
+
+  // Fonction de navigation vers les détails du job
+  const handleNavigation = (_jobId: number) => {
+    router.push(`/detailsJob/${_jobId}`); // Naviguer vers la page des détails du job
   };
 
   return (
     <>
-      <Card
-        onClick={handleNavigation}
-        jobTitle="Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F"
-        location="Honguemare-Guenouville, France"
-        contractType="CDI"
-        diplomaRequired="Sans diplôme"
-        experience="<1 an"
-        time="Temps partiel"
-        remote="Pas de télétravail"
-      />
-      <Card
-        onClick={() => console.log("Clicked Etudiant Card")}
-        jobTitle="Equipier Polyvalent Etudiant (H/F)"
-        location="Honguemare-Guenouville, France"
-        contractType="CDI"
-        diplomaRequired="Sans diplôme"
-        experience="<1 an"
-        time="Temps partiel"
-        remote="Pas de télétravail"
-      />
-       <Card
-        onClick={() => console.log("Clicked Etudiant Card")}
-        jobTitle="Equipier Polyvalent Etudiant (H/F)"
-        location="Honguemare-Guenouville, France"
-        contractType="CDI"
-        diplomaRequired="Sans diplôme"
-        experience="<1 an"
-        time="Temps partiel"
-        remote="Pas de télétravail"
-      />  <Card
-      onClick={() => console.log("Clicked Etudiant Card")}
-      jobTitle="Equipier Polyvalent Etudiant (H/F)"
-      location="Honguemare-Guenouville, France"
-      contractType="CDI"
-      diplomaRequired="Sans diplôme"
-      experience="<1 an"
-      time="Temps partiel"
-      remote="Pas de télétravail"
-    />
+      {enterprise.jobsnew.map((job, index) => (
+        <Card
+          key={index}
+          onClick={() => handleNavigation(job.jobId)} // Assurez-vous que job.jobId existe
+          jobId={job.jobId} // Passez le jobId ici
+          jobTitle={job.title}
+          location={job.location}
+          contractType={job.contractType}
+          diplomaRequired={job.diploma}
+          experience={job.experience}
+          time={job.workTime}
+          remote={job.remote}
+        />
+      ))}
     </>
   );
 };
 
-// Default export for JobCards
+// Exportation par défaut pour JobCards
 export default JobCards;

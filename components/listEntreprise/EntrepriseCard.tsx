@@ -128,11 +128,11 @@ const icons = {
 
 
 function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
-  const handle = () =>{
-    alert(enterprise.id)
-  }
+  const handleClick = () => {
+    window.location.href = `/details/${enterprise.id}`; // Use enterprise.id here
+  };
   return (
-    <Card  className="bg-white shadow-sm rounded-xl hover:shadow-lg overflow-hidden border border-gray-200 flex flex-col">
+    <Card onClick={handleClick} className="bg-white shadow-sm rounded-xl hover:shadow-lg overflow-hidden border border-gray-200 flex flex-col">
       
       <CardHeader className="p-0 relative">
         <div className="h-28 overflow-hidden">
@@ -149,7 +149,7 @@ function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
       </CardHeader>
 
       <CardContent className="pt-16 px-4 flex-grow">
-        <Link href={""} onClick={handle} className='hover:text-[#5138EE]'>
+        <Link href={""} className='hover:text-[#5138EE]'>
           <h2 className="font-bold text-xl">{enterprise.name}</h2>
 
           <div className="space-y-1 mt-3">
