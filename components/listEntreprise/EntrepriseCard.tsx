@@ -23,6 +23,7 @@ interface EnterpriseData {
 const enterprisesData: EnterpriseData[] = [
   {
     id: 1,
+    
     name: "METRO France (Les halles METRO)",
     coverImage: "/image/metro_00.png",
     logoImage: "/image/metro_00.png",
