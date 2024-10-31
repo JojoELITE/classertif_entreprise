@@ -1,11 +1,12 @@
-import React from "react";
+'use client';
+import React, { useEffect, useState } from "react";
 import { FaAngleRight } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
 import { IoMdTime } from "react-icons/io";
 import { BriefcaseBusiness, GraduationCap, Tag } from "lucide-react";
 import { IoMdGlobe } from "react-icons/io";
-import { useParams, useRouter } from "next/navigation"; // Importer useRouter
-import enterprisesData from "@/components/data/data"; // Assurez-vous que le chemin est correct
+import { useParams, useRouter } from "next/navigation";
+import enterprisesData from "@/components/data/data";
 
 interface CardProps {
   jobTitle: string;
@@ -15,7 +16,6 @@ interface CardProps {
   experience: string;
   time: string;
   remote: string;
-  jobId: number;
   onClick: () => void;
 }
 
@@ -81,20 +81,29 @@ const Card: React.FC<CardProps> = ({
 };
 
 const JobCards: React.FC = () => {
-  const { id } = useParams(); 
+  const { id } = useParams<{ id: string }>();
   const router = useRouter();
-  
-  // Recherche de l'entreprise correspondant à l'ID
-  const enterprise = enterprisesData.enterprisesData.find(ent => ent.id.toString() === id);
+  const [number, setNumber] = useState<string | undefined>(undefined);
 
-  // Vérification de l'existence de l'entreprise
+  useEffect(() => {
+    if (id) {
+      setNumber(id);
+    }
+  }, [id]);
+
+  // Fetch the enterprise corresponding to the ID
+  const enterprise = enterprisesData.enterprisesData.find(ent => ent.id.toString() === number);
+
+  // Check if the enterprise exists
   if (!enterprise) {
     return <div>Entreprise non trouvée</div>;
   }
 
-  // Fonction de navigation vers les détails du job
-  const handleNavigation = (_jobId: number) => {
-    router.push(`/detailsJob/${_jobId}`); // Naviguer vers la page des détails du job
+  // Navigate to job details using the enterprise id
+  const handleNavigation = () => {
+    if (number) {
+      router.push(`/detailsJob/${number}`); // Use the id from useParams
+    }
   };
 
   return (
@@ -102,8 +111,7 @@ const JobCards: React.FC = () => {
       {enterprise.jobsnew.map((job, index) => (
         <Card
           key={index}
-          onClick={() => handleNavigation(job.jobId)} // Assurez-vous que job.jobId existe
-          jobId={job.jobId} // Passez le jobId ici
+          onClick={handleNavigation} // Use the handleNavigation directly
           jobTitle={job.title}
           location={job.location}
           contractType={job.contractType}
@@ -117,5 +125,5 @@ const JobCards: React.FC = () => {
   );
 };
 
-// Exportation par défaut pour JobCards
+// Default export for JobCards
 export default JobCards;

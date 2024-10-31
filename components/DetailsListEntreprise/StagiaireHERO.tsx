@@ -8,7 +8,7 @@ export default function StagiaireHERO() {
   const enterprise = enterprisesData.enterprisesData.find(ent => ent.id.toString() === id); // Access the array correctly
 
   if (!enterprise) {
-    return <div>Enterprise not fojkund</div>; // Handle case where enterprise doesn't exist
+    return <div>Enterprise not found</div>; // Handle case where enterprise doesn't exist
   }
   return (
     <div className="flex flex-col gap-9 h-full">

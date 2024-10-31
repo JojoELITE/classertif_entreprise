@@ -1,22 +1,24 @@
 "use client"
 import React from "react";
-import StagiaireHERO from "./StagiaireHERO";
-import Information from "./Information";
 import { RiShareBoxFill } from "react-icons/ri";
-import CardGeo from "./CardGeo";
+
 import { FaClock } from "react-icons/fa6";
-import Share from "./Share";
-import Fonction from "./Fonction";
-import Navbar from "./Navbar";
+
 import { useParams } from "next/navigation";
 import enterprisesData from "@/components/data/data"; 
+import StagiaireHERO from "@/components/DetailsListEntreprise/StagiaireHERO";
+// import Fonction from "@/components/DetailsListEntreprise/Fonction";
+import Information from "@/components/DetailsListEntreprise/Information";
+import CardGeo from "@/components/DetailsListEntreprise/CardGeo";
+import Share from "@/components/DetailsListEntreprise/Share";
+import Navbar from "./Navbar";
 
 export default function Stagiaire() {
   const { id } = useParams(); 
   const enterprise = enterprisesData.enterprisesData.find(ent => ent.id.toString() === id);
 
   if (!enterprise) {
-    return <div>Enterprise not fojhjjhund</div>; 
+    return <div>Enterprise not found</div>; 
   }
   return (
     <div>
@@ -25,7 +27,7 @@ export default function Stagiaire() {
         <div className="flex flex-col" style={{ width: "70%" }}>
           <Navbar />
           
-          <h1 className="font-semibold text-xl px-6">{enterprise.whoAreWe.content}</h1>
+          <h1 className="font-semibold text-xl px-6">{enterprise.whoAreWe.title}</h1>
           <div className="px-6">
             <p className="py-9">{enterprise.whoAreWe.content}</p>
           </div>
@@ -42,11 +44,7 @@ export default function Stagiaire() {
             <hr />
             <ul className="px-5 pt-8 flex flex-col gap-4 w-full">
               <h1 className="font-semibold text-xl px-6">{enterprise.advantages.title}</h1>
-              {enterprise.advantages.items.map((item, index) => (
-                <li key={index} className="flex justify-between px-5">
-                  {item}
-                </li>
-              ))}
+               <span>{enterprise.advantages.items}</span>
             </ul>
           </div>
           <br />
@@ -58,9 +56,10 @@ export default function Stagiaire() {
             <RiShareBoxFill />
           </div>
           <div className="py-7">
-            <Fonction />
-          </div>
           <Information />
+          
+          </div>
+          {/* <Fonction /> */}
           
           <div className="flex px-5 pt-5 justify-between">
             <span>
