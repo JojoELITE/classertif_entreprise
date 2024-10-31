@@ -9,6 +9,7 @@ export default function RechercheWithHelp() {
 
   // Move hooks outside of the conditional check
   const [showInput, setShowInput] = useState(false);
+  
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const { id } = useParams(); 
