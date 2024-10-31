@@ -1,22 +1,26 @@
 "use client"
 import React from "react";
-import StagiaireHERO from "./StagiaireHERO";
-import Information from "./Information";
+
 import { RiShareBoxFill } from "react-icons/ri";
-import CardGeo from "./CardGeo";
+
 import { FaClock } from "react-icons/fa6";
-import Share from "./Share";
-import Fonction from "./Fonction";
-import Navbar from "./Navbar";
+
+
 import { useParams } from "next/navigation";
 import enterprisesData from "@/components/data/data"; 
+import StagiaireHERO from "@/components/DetailsListEntreprise/StagiaireHERO";
+import Navbar from "@/components/DetailsListEntreprise/Navbar";
+import Fonction from "@/components/DetailsListEntreprise/Fonction";
+import Information from "@/components/DetailsListEntreprise/Information";
+import CardGeo from "@/components/DetailsListEntreprise/CardGeo";
+import Share from "@/components/DetailsListEntreprise/Share";
 
 export default function Stagiaire() {
   const { id } = useParams(); 
   const enterprise = enterprisesData.enterprisesData.find(ent => ent.id.toString() === id);
 
   if (!enterprise) {
-    return <div>Enterprise not fojhjjhund</div>; 
+    return <div>Enterprise not fojhhund</div>; 
   }
   return (
     <div>

@@ -3,12 +3,12 @@ import { useState } from "react";
 
 const Tableau = [
     { info: 'Présentation', link: 'Présentation' },
-    { info: 'Offres d’emploi', link: 'Offres', count: 390 }, // Exemple de nombre
+    { info: 'Offres d’emploi', link: 'Offres', count: 390 },
 ];
 
 
 interface TabsProps {
-    onSelect: (link: string) => void; // Define the expected type for onSelect
+    onSelect: (link: string) => void; 
 }
 
 const Tabs: React.FC<TabsProps> = ({ onSelect }) => {
