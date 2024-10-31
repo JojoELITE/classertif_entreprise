@@ -128,8 +128,11 @@ const icons = {
 
 
 function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
+  const handleClick = () => {
+    window.location.href = `/details/${enterprise.id}`; // Use enterprise.id here
+  };
   return (
-    <Card className="bg-white shadow-sm rounded-xl hover:shadow-lg overflow-hidden border border-gray-200 flex flex-col">
+    <Card onClick={handleClick} className="bg-white shadow-sm rounded-xl hover:shadow-lg overflow-hidden border border-gray-200 flex flex-col">
       
       <CardHeader className="p-0 relative">
         <div className="h-28 overflow-hidden">

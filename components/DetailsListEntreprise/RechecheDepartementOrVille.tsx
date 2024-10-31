@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import { MapPin } from "lucide-react";
+import { useParams } from "next/navigation";
+import enterprisesData from "@/components/data/data";
 
 export default function RechecheDepartementOrVille() {
+
+  // Move hooks outside of the conditional check
   const [showInput, setShowInput] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
 
-  const options = [
-    { name: "France", jobs: "382 jobs" },
-    { name: "Maroc", jobs: "4 jobs" },
-    { name: "Martinique", jobs: "2 jobs" },
-    { name: "Chili", jobs: "1 job" },
-    { name: "Nouvelle-Calédonie", jobs: "1 job" },
-  ];
+  const { id } = useParams(); 
+
+  const enterprise = enterprisesData.enterprisesData.find(ent => ent.id.toString() === id);
+
+  if (!enterprise) {
+    return <div>Enterprise not found</div>; // Handle case where enterprise doesn't exist
+  }
 
   const handleInputFocus = () => setShowInput(true);
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,7 +31,7 @@ export default function RechecheDepartementOrVille() {
     );
   };
 
-  const filteredOptions = options.filter((option) =>
+  const filteredOptions = enterprise.parville.filter((option) =>
     option.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
