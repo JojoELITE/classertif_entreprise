@@ -6,17 +6,14 @@ import { useParams } from "next/navigation";
 import enterprisesData from "@/components/data/data";
 
 export default function RechercheWithHelp() {
-
-  // Move hooks outside of the conditional check
   const [showInput, setShowInput] = useState(false);
-  
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const { id } = useParams(); 
   const enterprise = enterprisesData.enterprisesData.find(ent => ent.id.toString() === id);
 
   if (!enterprise) {
-    return <div>Enterprise not found</div>; // Handle case where enterprise doesn't exist
+    return <div>Enterprise not found</div>; 
   }
 
 
@@ -33,7 +30,7 @@ export default function RechercheWithHelp() {
     );
   };
 
-  const options = Object.values(enterprise.contratType); // Use contratType from the enterprise
+  const options = Object.values(enterprise.contratType); 
   const filteredOptions = options.filter((option) =>
     option.toLowerCase().includes(searchTerm.toLowerCase())
   );
