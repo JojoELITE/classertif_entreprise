@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -17,6 +17,7 @@ interface EnterpriseData {
   location: string;
   numberEmployees: string;
   offersCount: number;
+  date: string; 
 }
 
 const enterprisesData: EnterpriseData[] = [
@@ -29,6 +30,7 @@ const enterprisesData: EnterpriseData[] = [
     location: "Nanterre, France",
     numberEmployees: "1000",
     offersCount: 3,
+    date: "2024-10-31", 
   },
   {
     id: 2,
@@ -39,6 +41,7 @@ const enterprisesData: EnterpriseData[] = [
     location: "1 Rue de Hanovre",
     numberEmployees: "",
     offersCount: 25,
+    date: "2024-10-30", 
   },
   {
     id: 3,
@@ -49,6 +52,7 @@ const enterprisesData: EnterpriseData[] = [
     location: "Courbevoie",
     numberEmployees: "1000",
     offersCount: 388,
+    date: "2024-10-29", 
   },
   {
     id: 4,
@@ -59,6 +63,7 @@ const enterprisesData: EnterpriseData[] = [
     location: "Clichy, France",
     numberEmployees: "",
     offersCount: 5,
+    date: "2024-10-31", 
   },
   {
     id: 5,
@@ -69,6 +74,7 @@ const enterprisesData: EnterpriseData[] = [
     location: "Paris, France",
     numberEmployees: "1000",
     offersCount: 3,
+    date: "2024-10-31", 
   },
   {
     id: 6,
@@ -79,6 +85,7 @@ const enterprisesData: EnterpriseData[] = [
     location: "Villebon-sur-Yvette",
     numberEmployees: "",
     offersCount: 2,
+    date: "2024-10-30", 
   },
   {
     id: 7,
@@ -89,6 +96,7 @@ const enterprisesData: EnterpriseData[] = [
     location: "Paris, France",
     numberEmployees: "",
     offersCount: 4,
+    date: "2024-10-29", 
   },
   {
     id: 8,
@@ -99,6 +107,7 @@ const enterprisesData: EnterpriseData[] = [
     location: "Clichy, France",
     numberEmployees: "1000",
     offersCount: 2,
+    date: "2024-10-31", 
   },
   {
     id: 9,
@@ -109,6 +118,73 @@ const enterprisesData: EnterpriseData[] = [
     location: "",
     numberEmployees: "",
     offersCount: 2,
+    date: "2024-10-30", 
+  },
+  {
+    id: 10,
+    name: "Capgemini",
+    coverImage: "/image/capgemini.png",
+    logoImage: "/image/capgemini_logo.png",
+    industry: "Technologie",
+    location: "Paris, France",
+    numberEmployees: "5000",
+    offersCount: 12,
+    date: "2024-10-31", 
+  },
+  {
+    id: 11,
+    name: "Air France",
+    coverImage: "/image/airfrance.png",
+    logoImage: "/image/airfrance_logo.png",
+    industry: "Transport",
+    location: "Roissy-en-France, France",
+    numberEmployees: "30000",
+    offersCount: 15,
+    date: "2024-10-30", 
+  },
+  {
+    id: 12,
+    name: "BNP Paribas",
+    coverImage: "/image/bnp.png",
+    logoImage: "/image/bnp_logo.png",
+    industry: "Banque",
+    location: "Paris, France",
+    numberEmployees: "100000",
+    offersCount: 20,
+    date: "2024-10-29", 
+  },
+  {
+    id: 13,
+    name: "Orange",
+    coverImage: "/image/orange.png",
+    logoImage: "/image/orange_logo.png",
+    industry: "Télécommunications",
+    location: "Paris, France",
+    numberEmployees: "50000",
+    offersCount: 10,
+    date: "2024-10-31", 
+  },
+  {
+    id: 14,
+    name: "Danone",
+    coverImage: "/image/danone.png",
+    logoImage: "/image/danone_logo.png",
+    industry: "Agroalimentaire",
+    location: "Paris, France",
+    numberEmployees: "10000",
+    offersCount: 8,
+    date: "2024-10-30", 
+  },
+  {
+    id: 15,
+    name: "TotalEnergies",
+    coverImage: "/image/total.png",
+    logoImage: "/image/total_logo.png",
+    industry: "Énergie",
+    location: "La Défense, France",
+    numberEmployees: "10000",
+    offersCount: 6,
+    date: "2024-10-31", 
   },
 ];
 
@@ -126,14 +202,12 @@ const icons = {
   ),
 };
 
-
 function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
   const handleClick = () => {
     window.location.href = `/details/${enterprise.id}`; // Use enterprise.id here
   };
   return (
     <Card onClick={handleClick} className="bg-white shadow-sm rounded-xl hover:shadow-lg overflow-hidden border border-gray-200 flex flex-col">
-      
       <CardHeader className="p-0 relative">
         <div className="h-28 overflow-hidden">
           <div className='h-full'>
@@ -174,6 +248,9 @@ function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
                 &gt; {enterprise.numberEmployees}
               </div>
             )}
+            <div className="text-sm text-gray-500 mt-2">
+              {new Date(enterprise.date).toLocaleDateString()} {/* Display date */}
+            </div>
           </div>
 
         </Link>
@@ -189,10 +266,10 @@ function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
   );
 }
 
-
 export default function EnterpriseCards() {
   const initialVisibleCount = 3;
   const [visibleCount, setVisibleCount] = useState(initialVisibleCount);
+  const [showToday, setShowToday] = useState(false); // State for the switch
 
   const handleShowMore = () => {
     setVisibleCount((prevCount) => prevCount + 3);
@@ -202,22 +279,31 @@ export default function EnterpriseCards() {
     setVisibleCount(initialVisibleCount);
   };
 
+  const handleSwitchToggle = () => {
+    setShowToday((prev) => !prev);
+  };
+
+  // Filter enterprises based on today's date
+  const filteredEnterprises = showToday 
+    ? enterprisesData.filter(enterprise => enterprise.date === new Date().toISOString().split('T')[0]) 
+    : enterprisesData;
+
   return (
     <div className="w-full px-4 lg:px-10 py-[26%] lg:py-0">
       <div className="flex w-full flex-row flex-wrap items-center justify-between mb-8">
-        <h1 className="text-xl font-bold text-black">43 entreprises disponibles</h1>
+        <h1 className="text-xl font-bold text-black">{filteredEnterprises.length} entreprises disponibles</h1>
         <div className="flex items-center space-x-2">
           <span className="text-lg text-gray-600">sélection &apos;à la une&apos;</span>
-          <Switch />
+          <Switch onClick={handleSwitchToggle} />
         </div>
       </div>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
-        {enterprisesData.slice(0, visibleCount).map(enterprise => (
+        {filteredEnterprises.slice(0, visibleCount).map(enterprise => (
           <EnterpriseCard key={enterprise.id} enterprise={enterprise} />
         ))}
       </div>
       <div className="flex justify-center mt-6 space-x-4">
-        {visibleCount < enterprisesData.length && (
+        {visibleCount < filteredEnterprises.length && (
           <button
             onClick={handleShowMore}
             className="px-4 py-2 bg-[#5138EE] text-white rounded-md hover:bg-[#3c2eb5] transition-colors"
