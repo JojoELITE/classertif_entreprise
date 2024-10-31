@@ -6,9 +6,6 @@ function Page() {
   return (
     <div className="">
       <SectionHero />
-      <div className="w-full py-52 ">
-          <EntrepriseCard />
-        </div>
     </div>
   )
 }

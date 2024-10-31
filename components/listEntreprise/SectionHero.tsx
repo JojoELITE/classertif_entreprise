@@ -4,16 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Search, MapPin, SlidersHorizontal } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import EnterpriseCards from "@/components/listEntreprise/EntrepriseCard"; // Ensure this imports correctly
 
 export default function Component(): JSX.Element {
   const [showInput, setShowInput] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleClick = () => setShowInput((prev) => !prev);
 
   return (
-    <div className='w-full flex flex-col gap-9'>
-      <div className='relative h-full w-full'>
+    <div className="w-full flex flex-col gap-9">
+      <div className="relative h-full w-full">
         <Image
           src="/image/image_cover.png"
           width={1000}
@@ -34,7 +35,9 @@ export default function Component(): JSX.Element {
                 <input
                   type="text"
                   placeholder="Chercher une entreprise"
-                  className="w-full pl-10 py-2  border-gray-300 focus:outline-none"
+                  className="w-full pl-10 py-2 border-gray-300 focus:outline-none"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                 />
               </div>
 
@@ -67,18 +70,14 @@ export default function Component(): JSX.Element {
 
             <div className="flex items-center gap-2 justify-center mt-6">
               <SlidersHorizontal size={12} />
-              <Link href={""} className="text-sm underline">
-                Recherche avancée
-              </Link>
+              <div className="text-sm underline">Recherche avancée</div>
             </div>
           </div>
-
-
-
         </div>
-
       </div>
-
+      <div className="w-full py-52 ">
+        <EnterpriseCards searchQuery={searchQuery} />
+      </div>
     </div>
   );
 }
