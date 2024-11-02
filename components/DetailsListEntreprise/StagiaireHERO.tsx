@@ -27,7 +27,7 @@ export default function StagiaireHERO() {
             <span className="font-bold text-lg">{enterprise.name}</span>
           </div>
           <div className="flex  pt-12 flex-col pl-5  gap-1">
-        <div className="flex gap-3">
+        <div className=" flex gap-3">
         <Stagiaire1/>
         </div>
       </div>

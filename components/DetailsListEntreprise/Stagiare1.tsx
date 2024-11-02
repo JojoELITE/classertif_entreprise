@@ -10,21 +10,30 @@ export default function Stagiaire1() {
   const { id } = useParams();
   const enterprise = enterprisesData.enterprisesData.find(ent => ent.id.toString() === id);
 
-  if (!enterprise || !enterprise.stagiaire) {
-    return <div>Enterprise or stagiaire not found</div>; // Handle case where enterprise or stagiaire doesn't exist
+  // Vérification de l'existence de l'entreprise et du stagiaire
+  if (!enterprise) {
+    return <div>Entreprise non trouvée</div>;
   }
 
-  // Find the title from the stagiaire array
-  const stagiaireTitle = enterprise.stagiaire.find(item => item.title)?.title || "No Title Available";
+  const stagiaire = enterprise.stagiaire;
 
-  // Define stagiaire data with icons only
+  // Vérification de l'existence du stagiaire
+  if (!stagiaire) {
+    return <div>Stagiaire non trouvé</div>;
+  }
+
+  // Accès aux données du stagiaire
+  const stagiaireTitle = stagiaire.title || "Titre non disponible";
+  const stagiaireDetails = stagiaire.details;
+
+  // Définir les données du stagiaire avec icônes
   const stagiaireData = [
-    { icon: <Tag size={15} color="grey" />, label: enterprise.stagiaire.find(item => item.label)?.label }, // CDI
-    { icon: <CiLocationOn size={15} color="grey" />, label: enterprise.stagiaire[1]?.label }, // Location
-    { icon: <GraduationCap size={15} color="grey" />, label: enterprise.stagiaire[2]?.label }, // Diploma
-    { icon: <BriefcaseBusiness size={11} color="grey" />, label: enterprise.stagiaire[3]?.label }, // Experience
-    { icon: <IoMdTime color="grey" />, label: enterprise.stagiaire[4]?.label }, // Work Time
-    { icon: <IoMdGlobe color="grey" />, label: enterprise.stagiaire[5]?.label }, // Remote Policy
+    { icon: <Tag size={15} color="grey" />, label: stagiaireDetails.type }, // CDI
+    { icon: <CiLocationOn size={15} color="grey" />, label: stagiaireDetails.location }, // Location
+    { icon: <GraduationCap size={15} color="grey" />, label: stagiaireDetails.diploma }, // Diplôme
+    { icon: <BriefcaseBusiness size={11} color="grey" />, label: stagiaireDetails.experience }, // Expérience
+    { icon: <IoMdTime color="grey" />, label: stagiaireDetails.workTime }, // Temps de travail
+    { icon: <IoMdGlobe color="grey" />, label: stagiaireDetails.remotePolicy }, // Politique de télétravail
   ];
 
   return (
@@ -32,18 +41,18 @@ export default function Stagiaire1() {
       <div className="flex flex-col sm:flex-col md:flex-row">
         <div className="flex items-center justify-center gap-9">
           <div>
-            {/* Access the title safely */}
-            <p>{stagiaireTitle}</p>
+            {/* Affichage du titre */}
+            <p className="text-lg font-bold">{stagiaireTitle}</p>
 
-            <div className="flex flex-col md:flex-row gap-3 mt-4">
-              {/* Map for stagiaire data */}
+            <div className="flex flex-wrap gap-3 mt-4">
+              {/* Mapping des données du stagiaire */}
               {stagiaireData.map((item, index) => (
                 <button
                   key={index}
-                  className="bg-[#f4f4f4] border text-xs flex gap-1 items-center justify-center px-2 transition-colors"
+                  className="bg-[#f4f4f4] border text-xs flex gap-1 items-center justify-center px-2 transition-colors flex-grow"
                 >
-                  {item.icon} {/* Display the icon only */}
-                  {item.label}
+                  {item.icon}
+                  <span className="ml-1">{item.label}</span>
                 </button>
               ))}
             </div>

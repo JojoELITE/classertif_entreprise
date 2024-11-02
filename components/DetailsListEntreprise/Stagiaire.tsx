@@ -1,13 +1,10 @@
-"use client"
+"use client";
 import React from "react";
 import { RiShareBoxFill } from "react-icons/ri";
-
 import { FaClock } from "react-icons/fa6";
-
 import { useParams } from "next/navigation";
 import enterprisesData from "@/components/data/data"; 
 import StagiaireHERO from "@/components/DetailsListEntreprise/StagiaireHERO";
-// import Fonction from "@/components/DetailsListEntreprise/Fonction";
 import Information from "@/components/DetailsListEntreprise/Information";
 import CardGeo from "@/components/DetailsListEntreprise/CardGeo";
 import Share from "@/components/DetailsListEntreprise/Share";
@@ -20,11 +17,15 @@ export default function Stagiaire() {
   if (!enterprise) {
     return <div>Enterprise not found</div>; 
   }
+
   return (
     <div>
       <StagiaireHERO />
+      <div className="flex md:hidden py-7">
+            <Information />
+          </div>
       <div className="flex flex-col lg:flex-row lg:gap-12 lg:py-14 lg:p-5 sm:gap-5">
-        <div className="flex flex-col" style={{ width: "70%" }}>
+        <div className="flex  flex-col w-full lg:w-2/3">
           <Navbar />
           
           <h1 className="font-semibold text-xl px-6">{enterprise.whoAreWe.title}</h1>
@@ -36,30 +37,30 @@ export default function Stagiaire() {
           <div className="pt-7">
             <h1 className="font-semibold text-xl px-6">{enterprise.jobDescription.title}</h1>
             <p className="py-9 px-6">{enterprise.jobDescription.content}</p>
-            <ul className="px-12 flex flex-col gap-4 w-full">
-            </ul>
+            <ul className="px-12 flex flex-col gap-4 w-full"></ul>
           </div>
 
           <div className="pt-5">
             <hr />
             <ul className="px-5 pt-8 flex flex-col gap-4 w-full">
               <h1 className="font-semibold text-xl px-6">{enterprise.advantages.title}</h1>
-               <span>{enterprise.advantages.items}</span>
+              <span>{enterprise.advantages.items}</span>
             </ul>
           </div>
           <br />
+          <div className="flex md:hidden pt-12 px-5">
+            <Share />
+          </div>
         </div>
 
-        <div className="" style={{ width: "30%" }}>
-          <div className="flex items-center sticky border rounded font-bold bg-[#472df1] gap-2 text-white py-2 justify-center">
+        <div className="w-full lg:w-1/3">
+          <div className="hidden md:flex items-center sticky border rounded font-bold bg-[#472df1] gap-2 text-white py-2 justify-center">
             <button>Postuler</button>
             <RiShareBoxFill />
           </div>
           <div className="py-7">
-          <Information />
-          
+            <Information />
           </div>
-          {/* <Fonction /> */}
           
           <div className="flex px-5 pt-5 justify-between">
             <span>
@@ -77,7 +78,7 @@ export default function Stagiaire() {
               {enterprise.calcul}
             </button>
           </div>
-          <div className="pt-12 px-5">
+          <div className="hidden md:flex pt-12 px-5">
             <Share />
           </div>
         </div>

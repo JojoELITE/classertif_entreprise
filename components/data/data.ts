@@ -17,16 +17,17 @@ const enterprisesData = [
            rh:  "Ressources humaines",
            ServiceRelationclients: "Service & Relation clients",
         },
-           stagiaire : [
-          { title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F"},
-    { label: "CDI" },
-    {  label: "Honguemare-Guenouville, France" },
-    { label: "Sans diplôme" },
-    {  label: "< 1 an" },
-    {  label: "Temps partiel" },
-    {  label: "Pas de télétravail" },
-  ],
-
+         stagiaire: {
+  title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+  details: {
+    type: "CDI",
+    location: "Honguemare-Guenouville, France",
+    diploma: "Sans diplôme",
+    experience: "< 1 an",
+    workTime: "Temps partiel",
+    remotePolicy: "Pas de télétravail"
+  }
+},
      parville:[
         { name: "France", jobs: "382 jobs" },
         { name: "Maroc", jobs: "4 jobs" },
@@ -182,6 +183,16 @@ const enterprisesData = [
             { name: "Chili", jobs: "1 job" },
             { name: "Nouvelle-Calédonie", jobs: "1 job" },
          ],
+         stagiaire: {
+            title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+            details: {
+              type: "CDI",
+              location: "Honguemare-Guenouville, France",
+              diploma: "Sans diplôme",
+              experience: "< 1 an",
+              workTime: "Temps partiel",
+              remotePolicy: "Pas de télétravail"
+            }},
         name: "Lidl France",
         options:{
             conseil:    "conseil",
@@ -631,16 +642,17 @@ const enterprisesData = [
            rh:  "Ressources humaines",
            ServiceRelationclients: "Service & Relation clients",
         },
-           stagiaire : [
-          { title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F"},
-    { label: "CDI" },
-    {  label: "Honguemare-Guenouville, France" },
-    { label: "Sans diplôme" },
-    {  label: "< 1 an" },
-    {  label: "Temps partiel" },
-    {  label: "Pas de télétravail" },
-  ],
-
+         stagiaire: {
+  title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+  details: {
+    type: "CDI",
+    location: "Honguemare-Guenouville, France",
+    diploma: "Sans diplôme",
+    experience: "< 1 an",
+    workTime: "Temps partiel",
+    remotePolicy: "Pas de télétravail"
+  }
+},
      parville:[
         { name: "France", jobs: "382 jobs" },
         { name: "Maroc", jobs: "4 jobs" },
@@ -804,16 +816,17 @@ const enterprisesData = [
            rh:  "Ressources humaines",
            ServiceRelationclients: "Service & Relation clients",
         },
-           stagiaire : [
-          { title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F"},
-    { label: "CDI" },
-    {  label: "Honguemare-Guenouville, France" },
-    { label: "Sans diplôme" },
-    {  label: "< 1 an" },
-    {  label: "Temps partiel" },
-    {  label: "Pas de télétravail" },
-  ],
-
+         stagiaire: {
+  title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+  details: {
+    type: "CDI",
+    location: "Honguemare-Guenouville, France",
+    diploma: "Sans diplôme",
+    experience: "< 1 an",
+    workTime: "Temps partiel",
+    remotePolicy: "Pas de télétravail"
+  }
+},
      parville:[
         { name: "France", jobs: "382 jobs" },
         { name: "Maroc", jobs: "4 jobs" },
@@ -978,16 +991,17 @@ const enterprisesData = [
            rh:  "Ressources humaines",
            ServiceRelationclients: "Service & Relation clients",
         },
-           stagiaire : [
-          { title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F"},
-    { label: "CDI" },
-    {  label: "Honguemare-Guenouville, France" },
-    { label: "Sans diplôme" },
-    {  label: "< 1 an" },
-    {  label: "Temps partiel" },
-    {  label: "Pas de télétravail" },
-  ],
-
+         stagiaire: {
+  title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+  details: {
+    type: "CDI",
+    location: "Honguemare-Guenouville, France",
+    diploma: "Sans diplôme",
+    experience: "< 1 an",
+    workTime: "Temps partiel",
+    remotePolicy: "Pas de télétravail"
+  }
+},
      parville:[
         { name: "France", jobs: "382 jobs" },
         { name: "Maroc", jobs: "4 jobs" },
@@ -1151,16 +1165,17 @@ const enterprisesData = [
            rh:  "Ressources humaines",
            ServiceRelationclients: "Service & Relation clients",
         },
-           stagiaire : [
-          { title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F"},
-    { label: "CDI" },
-    {  label: "Honguemare-Guenouville, France" },
-    { label: "Sans diplôme" },
-    {  label: "< 1 an" },
-    {  label: "Temps partiel" },
-    {  label: "Pas de télétravail" },
-  ],
-
+         stagiaire: {
+  title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+  details: {
+    type: "CDI",
+    location: "Honguemare-Guenouville, France",
+    diploma: "Sans diplôme",
+    experience: "< 1 an",
+    workTime: "Temps partiel",
+    remotePolicy: "Pas de télétravail"
+  }
+},
      parville:[
         { name: "France", jobs: "382 jobs" },
         { name: "Maroc", jobs: "4 jobs" },
@@ -1324,16 +1339,17 @@ const enterprisesData = [
            rh:  "Ressources humaines",
            ServiceRelationclients: "Service & Relation clients",
         },
-           stagiaire : [
-          { title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F"},
-    { label: "CDI" },
-    {  label: "Honguemare-Guenouville, France" },
-    { label: "Sans diplôme" },
-    {  label: "< 1 an" },
-    {  label: "Temps partiel" },
-    {  label: "Pas de télétravail" },
-  ],
-
+         stagiaire: {
+  title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+  details: {
+    type: "CDI",
+    location: "Honguemare-Guenouville, France",
+    diploma: "Sans diplôme",
+    experience: "< 1 an",
+    workTime: "Temps partiel",
+    remotePolicy: "Pas de télétravail"
+  }
+},
      parville:[
         { name: "France", jobs: "382 jobs" },
         { name: "Maroc", jobs: "4 jobs" },
