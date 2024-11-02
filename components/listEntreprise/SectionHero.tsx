@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 
 export default function Component(): JSX.Element {
   const router = useRouter()
+  
   const [showInput, setShowInput] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [locationQuery, setLocationQuery] = useState("");
