@@ -2,9 +2,6 @@ const enterprisesData = [
     {
         id: 1,
         name: "METRO France (Les halles METRO)",
-        Stagiaire :[
-
-        ],
         options:{
             conseil:    "conseil",
             financeAssurance:  "finance / assurance",
@@ -192,7 +189,7 @@ const enterprisesData = [
               experience: "< 1 an",
               workTime: "Temps partiel",
               remotePolicy: "Pas de télétravail"
-            }},
+            }, },
         name: "Lidl France",
         options:{
             conseil:    "conseil",
@@ -627,9 +624,7 @@ const enterprisesData = [
     {
         id: 5,
         name: "ABYLSEN",
-        Stagiaire :[
-
-        ],
+     
         options:{
             conseil:    "conseil",
             financeAssurance:  "finance / assurance",
@@ -801,9 +796,7 @@ const enterprisesData = [
     {
         id: 6,
         name: "BRUNEAU",
-        Stagiaire :[
-
-        ],
+     
         options:{
             conseil:    "conseil",
             financeAssurance:  "finance / assurance",
@@ -976,9 +969,7 @@ const enterprisesData = [
     {
         id: 7,
         name: "Grant Thornton",
-        Stagiaire :[
-
-        ],
+     
         options:{
             conseil:    "conseil",
             financeAssurance:  "finance / assurance",
@@ -1150,9 +1141,7 @@ const enterprisesData = [
     {
         id: 8,
         name: "METRO Fran",
-        Stagiaire :[
-
-        ],
+     
         options:{
             conseil:    "conseil",
             financeAssurance:  "finance / assurance",
@@ -1324,9 +1313,7 @@ const enterprisesData = [
     {
         id: 9,
         name: "Pennylane",
-        Stagiaire :[
-
-        ],
+     
         options:{
             conseil:    "conseil",
             financeAssurance:  "finance / assurance",

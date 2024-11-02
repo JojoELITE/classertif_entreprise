@@ -9,6 +9,7 @@ import Information from "@/components/DetailsListEntreprise/Information";
 import CardGeo from "@/components/DetailsListEntreprise/CardGeo";
 import Share from "@/components/DetailsListEntreprise/Share";
 import Navbar from "./Navbar";
+import JobInfo from "./JobInfo";
 
 export default function Stagiaire() {
   const { id } = useParams(); 
@@ -22,7 +23,7 @@ export default function Stagiaire() {
     <div>
       <StagiaireHERO />
       <div className="flex md:hidden py-7">
-            <Information />
+            <JobInfo />
           </div>
       <div className="flex flex-col lg:flex-row lg:gap-12 lg:py-14 lg:p-5 sm:gap-5">
         <div className="flex  flex-col w-full lg:w-2/3">

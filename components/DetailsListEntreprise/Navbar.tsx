@@ -68,7 +68,7 @@ export default function Navbar() {
       </div>
   
     </div>
-    <div className="fixed bottom-0 left-0 right-0 flex justify-center p-4 bg-white md:hidden">
+    <div className="fixed bottom-0 left-0 right-0 flex justify-center p-4 md:hidden">
 <div className="flex items-center justify-center border rounded font-bold bg-[#472df1] gap-2 text-white py-2 w-full">
   <button>Postuler</button>
   <RiShareBoxFill />

@@ -2,13 +2,34 @@
 
 import { Button } from "@/components/ui/button";
 import { Search, MapPin, SlidersHorizontal } from "lucide-react";
-import { useState } from "react";
+import {useState } from "react";
 import Image from "next/image";
-import EnterpriseCards from "@/components/listEntreprise/EntrepriseCard"; // Ensure this imports correctly
+import enterprisesData from "@/components/data/data";
+import EnterpriseCards from "@/components/listEntreprise/EntrepriseCard";
+import { useRouter } from "next/navigation";
 
 export default function Component(): JSX.Element {
+  const router = useRouter()
   const [showInput, setShowInput] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [locationQuery, setLocationQuery] = useState("");
+  const [selectedEnterprise, setSelectedEnterprise] = useState<string>("");
+  const [active, setActive] = useState<number>();
+
+ const GreatFilter=()=>{
+  if(!active){
+    return null
+  } else if(active){
+    router.push(`details/${active}`)
+    setSelectedEnterprise("")
+  }
+ }
+
+  const filteredEnterprises = enterprisesData.enterprisesData.filter((env) => {
+    const matchesSearchQuery = env.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesLocationQuery = locationQuery === "" || env.location.toLowerCase().includes(locationQuery.toLowerCase());
+    return matchesSearchQuery && matchesLocationQuery;
+  });
 
   const handleClick = () => setShowInput((prev) => !prev);
 
@@ -25,7 +46,7 @@ export default function Component(): JSX.Element {
 
         <div className="absolute z-10 flex flex-col items-center justify-center top-[80%] w-full px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-full bg-white rounded-xl shadow-lg p-6">
-            <h1 className="text-2xl sm:text-3xl font-bold text-[#5138EE] mb-6 ">
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#5138EE] mb-6">
               Trouver l&apos;entreprise qui vous correspond
             </h1>
 
@@ -47,7 +68,7 @@ export default function Component(): JSX.Element {
                   className="flex w-full items-center px-4 py-2 border rounded-md"
                 >
                   <MapPin className="text-gray-400 w-5 h-5 mr-2" />
-                  <span className="text-gray-400">Où?</span>
+                  <span className="text-gray-400">{selectedEnterprise || "Où?"}</span>
                 </button>
 
                 {showInput && (
@@ -58,12 +79,31 @@ export default function Component(): JSX.Element {
                       placeholder="Rechercher"
                       className="pl-10 w-full py-1 text-xs border border-black/50 rounded-full focus:outline-none"
                       autoFocus
+                      onChange={(e) => setLocationQuery(e.target.value)}
                     />
+                    {locationQuery && (
+                      <ul className="mt-1 max-h-48 overflow-y-auto">
+                        {filteredEnterprises.map((env) => (
+                          <li
+                            key={env.id}
+                            onClick={() => {
+                              setActive(env.id)
+                              setSelectedEnterprise(env.name);
+                              setLocationQuery(""); // Optional: clear the input after selection
+                              setShowInput(false); // Close the dropdown after selection
+                            }}
+                            className="py-1 px-2 hover:bg-gray-100 cursor-pointer"
+                          >
+                            {env.name}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 )}
               </div>
 
-              <Button className="bg-[#5138EE] hover:bg-[#4128DE] text-white font-semibold py-2 px-6">
+              <Button onClick={GreatFilter} className="bg-[#5138EE] hover:bg-[#4128DE] text-white font-semibold py-2 px-6">
                 Rechercher
               </Button>
             </div>
@@ -75,7 +115,7 @@ export default function Component(): JSX.Element {
           </div>
         </div>
       </div>
-      <div className="w-full py-52 ">
+      <div className="w-full py-52">
         <EnterpriseCards searchQuery={searchQuery} />
       </div>
     </div>
