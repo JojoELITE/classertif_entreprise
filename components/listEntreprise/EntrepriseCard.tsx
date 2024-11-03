@@ -98,7 +98,7 @@ const enterprisesData: EnterpriseData[] = [
     location: "Paris, France",
     numberEmployees: "",
     offersCount: 4,
-    date: "2024-10-29", 
+    date: "2024-11-02", 
   },
   {
     id: 8,

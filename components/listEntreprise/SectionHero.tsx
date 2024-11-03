@@ -6,21 +6,22 @@ import {useState } from "react";
 import Image from "next/image";
 import enterprisesData from "@/components/data/data";
 import EnterpriseCards from "@/components/listEntreprise/EntrepriseCard";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 export default function Component(): JSX.Element {
-  const router = useRouter()
+  // const router = useRouter()
+
   const [showInput, setShowInput] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [locationQuery, setLocationQuery] = useState("");
   const [selectedEnterprise, setSelectedEnterprise] = useState<string>("");
   const [active, setActive] = useState<number>();
-
  const GreatFilter=()=>{
   if(!active){
     return null
   } else if(active){
-    router.push(`details/${active}`)
+    // router.push(`details/${active}`)
+    window.location.href = `details/${active}`
     setSelectedEnterprise("")
   }
  }

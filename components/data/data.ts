@@ -14,6 +14,12 @@ const enterprisesData = [
            rh:  "Ressources humaines",
            ServiceRelationclients: "Service & Relation clients",
         },
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
          stagiaire: {
   title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
   details: {
@@ -180,6 +186,12 @@ const enterprisesData = [
             { name: "Chili", jobs: "1 job" },
             { name: "Nouvelle-Calédonie", jobs: "1 job" },
          ],
+         fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
          stagiaire: {
             title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
             details: {
@@ -330,6 +342,12 @@ const enterprisesData = [
     
     {
         id: 3,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
         parville:[
             { name: "France", jobs: "382 jobs" },
             { name: "Maroc", jobs: "4 jobs" },
@@ -476,6 +494,12 @@ const enterprisesData = [
     },
     {
         id: 4,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
         parville:[
             { name: "France", jobs: "382 jobs" },
             { name: "Maroc", jobs: "4 jobs" },
@@ -623,6 +647,12 @@ const enterprisesData = [
     },
     {
         id: 5,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
         name: "ABYLSEN",
      
         options:{
@@ -795,6 +825,12 @@ const enterprisesData = [
     },
     {
         id: 6,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
         name: "BRUNEAU",
      
         options:{
@@ -968,6 +1004,12 @@ const enterprisesData = [
     
     {
         id: 7,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
         name: "Grant Thornton",
      
         options:{
@@ -1140,6 +1182,12 @@ const enterprisesData = [
     },
     {
         id: 8,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
         name: "METRO Fran",
      
         options:{
@@ -1312,6 +1360,12 @@ const enterprisesData = [
     },
     {
         id: 9,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
         name: "Pennylane",
      
         options:{
