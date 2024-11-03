@@ -27,7 +27,7 @@ export default function Information() {
           </div>
           <div>
             <p className='mb-2'>{enterprise.creation}</p>
-            <p className='mb-5'>{enterprise.street}</p>
+            <p className='md:mb-5 mb-9'>{enterprise.street}</p>
             <p className='mb-2'>{enterprise.langue}</p>
             <p className='mb-2'>{enterprise.collaborateurs}</p>
             <p className='mb-2'>{enterprise.ageMoyen}</p>
