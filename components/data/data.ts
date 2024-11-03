@@ -1,10 +1,7 @@
 const enterprisesData = [
     {
         id: 1,
-        name: "METRO Fran",
-        Stagiaire :[
-
-        ],
+        name: "METRO France (Les halles METRO)",
         options:{
             conseil:    "conseil",
             financeAssurance:  "finance / assurance",
@@ -17,16 +14,23 @@ const enterprisesData = [
            rh:  "Ressources humaines",
            ServiceRelationclients: "Service & Relation clients",
         },
-           stagiaire : [
-          { title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F"},
-    { label: "CDI" },
-    {  label: "Honguemare-Guenouville, France" },
-    { label: "Sans diplôme" },
-    {  label: "< 1 an" },
-    {  label: "Temps partiel" },
-    {  label: "Pas de télétravail" },
-  ],
-
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
+         stagiaire: {
+  title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+  details: {
+    type: "CDI",
+    location: "Honguemare-Guenouville, France",
+    diploma: "Sans diplôme",
+    experience: "< 1 an",
+    workTime: "Temps partiel",
+    remotePolicy: "Pas de télétravail"
+  }
+},
      parville:[
         { name: "France", jobs: "382 jobs" },
         { name: "Maroc", jobs: "4 jobs" },
@@ -182,7 +186,23 @@ const enterprisesData = [
             { name: "Chili", jobs: "1 job" },
             { name: "Nouvelle-Calédonie", jobs: "1 job" },
          ],
-        name: "Lidl Franc",
+         fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
+         stagiaire: {
+            title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+            details: {
+              type: "CDI",
+              location: "Honguemare-Guenouville, France",
+              diploma: "Sans diplôme",
+              experience: "< 1 an",
+              workTime: "Temps partiel",
+              remotePolicy: "Pas de télétravail"
+            }, },
+        name: "Lidl France",
         options:{
             conseil:    "conseil",
             financeAssurance:  "finance / assurance",
@@ -322,6 +342,12 @@ const enterprisesData = [
     
     {
         id: 3,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
         parville:[
             { name: "France", jobs: "382 jobs" },
             { name: "Maroc", jobs: "4 jobs" },
@@ -468,6 +494,12 @@ const enterprisesData = [
     },
     {
         id: 4,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
         parville:[
             { name: "France", jobs: "382 jobs" },
             { name: "Maroc", jobs: "4 jobs" },
@@ -495,7 +527,7 @@ const enterprisesData = [
            ServiceRelationclients: "Service & Relation clients",
         },
      
-        name: "L'Oréal Gr",
+        name: "L'Oréal Groupe",
         description: "description",
         avantage: "avantage",
         presentations: "presentations",
@@ -507,8 +539,8 @@ const enterprisesData = [
         remotePolicy: "pas de télétravail",
         experience: "< 1 an",
         presentation: "Présentation",
-        coverImage: "/image/loreal.png",
-        logoImage: "/image/loreal_00.png",
+        coverImage: "/image/oréal.png",
+        logoImage: "/image/oréal.png",
         industry: "Cosmétique",
         location: "Clichy, France",
         street: "1 Rue de Hanovre, 92290 Châtenay-Malabry, France",
@@ -612,6 +644,897 @@ const enterprisesData = [
               "Nos missions se déroulant principalement en français et en anglais, la pratique de l'anglais courant écrit et oral est nécessaire, celle du français est indispensable.",
             ],
           },
+    },
+    {
+        id: 5,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
+        name: "ABYLSEN",
+     
+        options:{
+            conseil:    "conseil",
+            financeAssurance:  "finance / assurance",
+            comptability:'Comptabilité / Gestion',
+            fiscaliteJuridique: "fiscalite / juridique",
+            ITTechProduit:"IT / Tech / Produit",
+            MarketingCommunication :  "Marketing / Communication ",
+            MediaEdition: "Media / Edition",
+            Digital:"/ Digital",
+           rh:  "Ressources humaines",
+           ServiceRelationclients: "Service & Relation clients",
+        },
+         stagiaire: {
+  title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+  details: {
+    type: "CDI",
+    location: "Honguemare-Guenouville, France",
+    diploma: "Sans diplôme",
+    experience: "< 1 an",
+    workTime: "Temps partiel",
+    remotePolicy: "Pas de télétravail"
+  }
+},
+     parville:[
+        { name: "France", jobs: "382 jobs" },
+        { name: "Maroc", jobs: "4 jobs" },
+        { name: "Martinique", jobs: "2 jobs" },
+        { name: "Chili", jobs: "1 job" },
+        { name: "Nouvelle-Calédonie", jobs: "1 job" },
+     ],
+        calcul:"Calculer le temps de trajet",
+        contratType:{
+            Alternance:"Alternance",
+            CDI: "CDI",
+            CDD:  "CDD",
+            professionalité:  "professionalité",
+            Stage:  "Stage",
+        },
+        whoAreWe: {
+            title: "Qui sommes-nous?",
+            content: `Forvis Mazars est un groupe international d'audit, de fiscalité et
+                      de conseil. Avec + de 40 000 collaborateurs présents dans une
+                      centaine de pays, nous faisons partie du Top 10 des cabinets
+                      mondiaux. Nous faisons des métiers sérieux... sans se prendre au
+                      sérieux. Faire partie de nos équipes, c'est avant tout assumer sa
+                      singularité et oser partager ses idées, dans une ambiance de
+                      travail que nous vous invitons à découvrir. Si vous souhaitez
+                      construire votre propre parcours et que vous aimez entreprendre,
+                      vous êtes au bon endroit!`,
+          },
+          jobDescription: {
+            title: "Description du poste",
+            content: `Dans le cadre du développement de ses activités, le département,
+                      Forensic Investigation Services de Forvis Mazars accueille des
+                      stagiaires ayant vocation à être pleinement intégrés au sein de
+                      ses équipes opérationnelles. Vous rejoindrez notre équipe Forensic
+                      Investigation et Litigation en pleine croissance...`, // Shortened for brevity
+          },
+          advantages: {
+            title: "Avantages",
+            items: [
+              "Étudiant(e) en Master (bac+5) d'école d'ingénieurs, de commerce ou universitaire de premier rang, vous complétez idéalement ce cursus par une spécialisation comptable ou financière.",
+              "Vous avez de fortes capacités analytiques et êtes à l'aise avec les chiffres et informations financières.",
+              "Vous avez de très bonnes capacités rédactionnelles.",
+              "Vous avez un esprit critique, êtes intellectuellement curieux(se) et particulièrement rigoureux(se).",
+              "Vous êtes capable de travailler à la fois de manière autonome et en équipe.",
+              "Nos missions se déroulant principalement en français et en anglais, la pratique de l'anglais courant écrit et oral est nécessaire, celle du français est indispensable.",
+            ],
+          },
+        description: "description",
+        avantage: "avantage",
+        presentations: "presentations",
+        ComptabilityText: "compatible",
+        Pasdetélétravail:" Pas de télétravail",
+        finance: 'finance',
+        pariteMen: '35',
+        pariteWomen: '65',
+        lastOpportunity: "derniere oportunite",
+        jobHistory: "calcul le trajet",
+        contractType: "stage",
+        remotePolicy: "pas de télétravail",
+        experience: "< 1 an",
+        presentation: "Présentation",
+        coverImage: "/image/abylsen_00.png",
+        logoImage: "/image/abylsen_00.png",
+        industry: "Commerce de gros",
+        location: "Nanterre, France",
+        street: "1 Rue de Hanovre, 92290 Châtenay-Malabry, France",
+        numberEmployees: "10",
+        offersCount: 3,
+        Localisation:"Localisation",
+        presentationLast: "Faire partie de nos équipes, c'est avant tout assumer sa singularité et oser partager ses idées, dans une ambiance de travail que nous vous invitons à découvrir.",
+        serieuxMetier: "Nous faisons des métiers sérieux... sans se prendre au sérieux.",
+        collaborationText: "Avec + de 40 000 collaborateurs présents dans une centaine de pays, nous faisons partie du Top 10 des cabinets mondiaux.",
+        group: "Forvis Mazars est un groupe international",
+        conseilFacility: "audit, de fiscalité et de conseil",
+        creation: "1945",
+        bureau: "1 Rue de Hanovre, 92290 Châtenay-Malabry, France",
+        langue: "🇫🇷 Français",
+        collaborateurs: ">1000",
+        ageMoyen: "28 ans",
+        lastJobs: "Derniers jobs",
+        seeOffers: "Voir les dernières offres",
+        jobs: [
+  
+            { jobId:1,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:2,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:3,
+                title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+        ],
+       jobsnew: [
+  
+            { jobId:1,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:2,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:3,
+                title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+        ],
+    },
+    {
+        id: 6,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
+        name: "BRUNEAU",
+     
+        options:{
+            conseil:    "conseil",
+            financeAssurance:  "finance / assurance",
+            comptability:'Comptabilité / Gestion',
+            fiscaliteJuridique: "fiscalite / juridique",
+            ITTechProduit:"IT / Tech / Produit",
+            MarketingCommunication :  "Marketing / Communication ",
+            MediaEdition: "Media / Edition",
+            Digital:"/ Digital",
+           rh:  "Ressources humaines",
+           ServiceRelationclients: "Service & Relation clients",
+        },
+         stagiaire: {
+  title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+  details: {
+    type: "CDI",
+    location: "Honguemare-Guenouville, France",
+    diploma: "Sans diplôme",
+    experience: "< 1 an",
+    workTime: "Temps partiel",
+    remotePolicy: "Pas de télétravail"
+  }
+},
+     parville:[
+        { name: "France", jobs: "382 jobs" },
+        { name: "Maroc", jobs: "4 jobs" },
+        { name: "Martinique", jobs: "2 jobs" },
+        { name: "Chili", jobs: "1 job" },
+        { name: "Nouvelle-Calédonie", jobs: "1 job" },
+     ],
+        calcul:"Calculer le temps de trajet",
+        contratType:{
+            Alternance:"Alternance",
+            CDI: "CDI",
+            CDD:  "CDD",
+            professionalité:  "professionalité",
+            Stage:  "Stage",
+        },
+        whoAreWe: {
+            title: "Qui sommes-nous?",
+            content: `Forvis Mazars est un groupe international d'audit, de fiscalité et
+                      de conseil. Avec + de 40 000 collaborateurs présents dans une
+                      centaine de pays, nous faisons partie du Top 10 des cabinets
+                      mondiaux. Nous faisons des métiers sérieux... sans se prendre au
+                      sérieux. Faire partie de nos équipes, c'est avant tout assumer sa
+                      singularité et oser partager ses idées, dans une ambiance de
+                      travail que nous vous invitons à découvrir. Si vous souhaitez
+                      construire votre propre parcours et que vous aimez entreprendre,
+                      vous êtes au bon endroit!`,
+          },
+          jobDescription: {
+            title: "Description du poste",
+            content: `Dans le cadre du développement de ses activités, le département,
+                      Forensic Investigation Services de Forvis Mazars accueille des
+                      stagiaires ayant vocation à être pleinement intégrés au sein de
+                      ses équipes opérationnelles. Vous rejoindrez notre équipe Forensic
+                      Investigation et Litigation en pleine croissance...`, // Shortened for brevity
+          },
+          advantages: {
+            title: "Avantages",
+            items: [
+              "Étudiant(e) en Master (bac+5) d'école d'ingénieurs, de commerce ou universitaire de premier rang, vous complétez idéalement ce cursus par une spécialisation comptable ou financière.",
+              "Vous avez de fortes capacités analytiques et êtes à l'aise avec les chiffres et informations financières.",
+              "Vous avez de très bonnes capacités rédactionnelles.",
+              "Vous avez un esprit critique, êtes intellectuellement curieux(se) et particulièrement rigoureux(se).",
+              "Vous êtes capable de travailler à la fois de manière autonome et en équipe.",
+              "Nos missions se déroulant principalement en français et en anglais, la pratique de l'anglais courant écrit et oral est nécessaire, celle du français est indispensable.",
+            ],
+          },
+        description: "description",
+        avantage: "avantage",
+        presentations: "presentations",
+        ComptabilityText: "compatible",
+        Pasdetélétravail:" Pas de télétravail",
+        finance: 'finance',
+        pariteMen: '35',
+        pariteWomen: '65',
+        lastOpportunity: "derniere oportunite",
+        jobHistory: "calcul le trajet",
+        contractType: "stage",
+        remotePolicy: "pas de télétravail",
+        experience: "< 1 an",
+        presentation: "Présentation",
+        coverImage: "/image/bruneau.png",
+        logoImage: "/image/bruneau.png",
+        industry: "Commerce de gros",
+        location: "Nanterre, France",
+        street: "1 Rue de Hanovre, 92290 Châtenay-Malabry, France",
+        numberEmployees: "10",
+        offersCount: 3,
+        Localisation:"Localisation",
+        presentationLast: "Faire partie de nos équipes, c'est avant tout assumer sa singularité et oser partager ses idées, dans une ambiance de travail que nous vous invitons à découvrir.",
+        serieuxMetier: "Nous faisons des métiers sérieux... sans se prendre au sérieux.",
+        collaborationText: "Avec + de 40 000 collaborateurs présents dans une centaine de pays, nous faisons partie du Top 10 des cabinets mondiaux.",
+        group: "Forvis Mazars est un groupe international",
+        conseilFacility: "audit, de fiscalité et de conseil",
+        creation: "1945",
+        bureau: "1 Rue de Hanovre, 92290 Châtenay-Malabry, France",
+        langue: "🇫🇷 Français",
+        collaborateurs: ">1000",
+        ageMoyen: "28 ans",
+        lastJobs: "Derniers jobs",
+        seeOffers: "Voir les dernières offres",
+        jobs: [
+  
+            { jobId:1,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:2,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:3,
+                title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+        ],
+       jobsnew: [
+  
+            { jobId:1,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:2,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:3,
+                title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+        ],
+    },
+    
+    {
+        id: 7,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
+        name: "Grant Thornton",
+     
+        options:{
+            conseil:    "conseil",
+            financeAssurance:  "finance / assurance",
+            comptability:'Comptabilité / Gestion',
+            fiscaliteJuridique: "fiscalite / juridique",
+            ITTechProduit:"IT / Tech / Produit",
+            MarketingCommunication :  "Marketing / Communication ",
+            MediaEdition: "Media / Edition",
+            Digital:"/ Digital",
+           rh:  "Ressources humaines",
+           ServiceRelationclients: "Service & Relation clients",
+        },
+         stagiaire: {
+  title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+  details: {
+    type: "CDI",
+    location: "Honguemare-Guenouville, France",
+    diploma: "Sans diplôme",
+    experience: "< 1 an",
+    workTime: "Temps partiel",
+    remotePolicy: "Pas de télétravail"
+  }
+},
+     parville:[
+        { name: "France", jobs: "382 jobs" },
+        { name: "Maroc", jobs: "4 jobs" },
+        { name: "Martinique", jobs: "2 jobs" },
+        { name: "Chili", jobs: "1 job" },
+        { name: "Nouvelle-Calédonie", jobs: "1 job" },
+     ],
+        calcul:"Calculer le temps de trajet",
+        contratType:{
+            Alternance:"Alternance",
+            CDI: "CDI",
+            CDD:  "CDD",
+            professionalité:  "professionalité",
+            Stage:  "Stage",
+        },
+        whoAreWe: {
+            title: "Qui sommes-nous?",
+            content: `Forvis Mazars est un groupe international d'audit, de fiscalité et
+                      de conseil. Avec + de 40 000 collaborateurs présents dans une
+                      centaine de pays, nous faisons partie du Top 10 des cabinets
+                      mondiaux. Nous faisons des métiers sérieux... sans se prendre au
+                      sérieux. Faire partie de nos équipes, c'est avant tout assumer sa
+                      singularité et oser partager ses idées, dans une ambiance de
+                      travail que nous vous invitons à découvrir. Si vous souhaitez
+                      construire votre propre parcours et que vous aimez entreprendre,
+                      vous êtes au bon endroit!`,
+          },
+          jobDescription: {
+            title: "Description du poste",
+            content: `Dans le cadre du développement de ses activités, le département,
+                      Forensic Investigation Services de Forvis Mazars accueille des
+                      stagiaires ayant vocation à être pleinement intégrés au sein de
+                      ses équipes opérationnelles. Vous rejoindrez notre équipe Forensic
+                      Investigation et Litigation en pleine croissance...`, // Shortened for brevity
+          },
+          advantages: {
+            title: "Avantages",
+            items: [
+              "Étudiant(e) en Master (bac+5) d'école d'ingénieurs, de commerce ou universitaire de premier rang, vous complétez idéalement ce cursus par une spécialisation comptable ou financière.",
+              "Vous avez de fortes capacités analytiques et êtes à l'aise avec les chiffres et informations financières.",
+              "Vous avez de très bonnes capacités rédactionnelles.",
+              "Vous avez un esprit critique, êtes intellectuellement curieux(se) et particulièrement rigoureux(se).",
+              "Vous êtes capable de travailler à la fois de manière autonome et en équipe.",
+              "Nos missions se déroulant principalement en français et en anglais, la pratique de l'anglais courant écrit et oral est nécessaire, celle du français est indispensable.",
+            ],
+          },
+        description: "description",
+        avantage: "avantage",
+        presentations: "presentations",
+        ComptabilityText: "compatible",
+        Pasdetélétravail:" Pas de télétravail",
+        finance: 'finance',
+        pariteMen: '35',
+        pariteWomen: '65',
+        lastOpportunity: "derniere oportunite",
+        jobHistory: "calcul le trajet",
+        contractType: "stage",
+        remotePolicy: "pas de télétravail",
+        experience: "< 1 an",
+        presentation: "Présentation",
+        coverImage: "/image/grant.png",
+        logoImage: "/image/grant.png",
+        industry: "Commerce de gros",
+        location: "Nanterre, France",
+        street: "1 Rue de Hanovre, 92290 Châtenay-Malabry, France",
+        numberEmployees: "10",
+        offersCount: 3,
+        Localisation:"Localisation",
+        presentationLast: "Faire partie de nos équipes, c'est avant tout assumer sa singularité et oser partager ses idées, dans une ambiance de travail que nous vous invitons à découvrir.",
+        serieuxMetier: "Nous faisons des métiers sérieux... sans se prendre au sérieux.",
+        collaborationText: "Avec + de 40 000 collaborateurs présents dans une centaine de pays, nous faisons partie du Top 10 des cabinets mondiaux.",
+        group: "Forvis Mazars est un groupe international",
+        conseilFacility: "audit, de fiscalité et de conseil",
+        creation: "1945",
+        bureau: "1 Rue de Hanovre, 92290 Châtenay-Malabry, France",
+        langue: "🇫🇷 Français",
+        collaborateurs: ">1000",
+        ageMoyen: "28 ans",
+        lastJobs: "Derniers jobs",
+        seeOffers: "Voir les dernières offres",
+        jobs: [
+  
+            { jobId:1,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:2,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:3,
+                title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+        ],
+       jobsnew: [
+  
+            { jobId:1,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:2,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:3,
+                title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+        ],
+    },
+    {
+        id: 8,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
+        name: "METRO Fran",
+     
+        options:{
+            conseil:    "conseil",
+            financeAssurance:  "finance / assurance",
+            comptability:'Comptabilité / Gestion',
+            fiscaliteJuridique: "fiscalite / juridique",
+            ITTechProduit:"IT / Tech / Produit",
+            MarketingCommunication :  "Marketing / Communication ",
+            MediaEdition: "Media / Edition",
+            Digital:"/ Digital",
+           rh:  "Ressources humaines",
+           ServiceRelationclients: "Service & Relation clients",
+        },
+         stagiaire: {
+  title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+  details: {
+    type: "CDI",
+    location: "Honguemare-Guenouville, France",
+    diploma: "Sans diplôme",
+    experience: "< 1 an",
+    workTime: "Temps partiel",
+    remotePolicy: "Pas de télétravail"
+  }
+},
+     parville:[
+        { name: "France", jobs: "382 jobs" },
+        { name: "Maroc", jobs: "4 jobs" },
+        { name: "Martinique", jobs: "2 jobs" },
+        { name: "Chili", jobs: "1 job" },
+        { name: "Nouvelle-Calédonie", jobs: "1 job" },
+     ],
+        calcul:"Calculer le temps de trajet",
+        contratType:{
+            Alternance:"Alternance",
+            CDI: "CDI",
+            CDD:  "CDD",
+            professionalité:  "professionalité",
+            Stage:  "Stage",
+        },
+        whoAreWe: {
+            title: "Qui sommes-nous?",
+            content: `Forvis Mazars est un groupe international d'audit, de fiscalité et
+                      de conseil. Avec + de 40 000 collaborateurs présents dans une
+                      centaine de pays, nous faisons partie du Top 10 des cabinets
+                      mondiaux. Nous faisons des métiers sérieux... sans se prendre au
+                      sérieux. Faire partie de nos équipes, c'est avant tout assumer sa
+                      singularité et oser partager ses idées, dans une ambiance de
+                      travail que nous vous invitons à découvrir. Si vous souhaitez
+                      construire votre propre parcours et que vous aimez entreprendre,
+                      vous êtes au bon endroit!`,
+          },
+          jobDescription: {
+            title: "Description du poste",
+            content: `Dans le cadre du développement de ses activités, le département,
+                      Forensic Investigation Services de Forvis Mazars accueille des
+                      stagiaires ayant vocation à être pleinement intégrés au sein de
+                      ses équipes opérationnelles. Vous rejoindrez notre équipe Forensic
+                      Investigation et Litigation en pleine croissance...`, // Shortened for brevity
+          },
+          advantages: {
+            title: "Avantages",
+            items: [
+              "Étudiant(e) en Master (bac+5) d'école d'ingénieurs, de commerce ou universitaire de premier rang, vous complétez idéalement ce cursus par une spécialisation comptable ou financière.",
+              "Vous avez de fortes capacités analytiques et êtes à l'aise avec les chiffres et informations financières.",
+              "Vous avez de très bonnes capacités rédactionnelles.",
+              "Vous avez un esprit critique, êtes intellectuellement curieux(se) et particulièrement rigoureux(se).",
+              "Vous êtes capable de travailler à la fois de manière autonome et en équipe.",
+              "Nos missions se déroulant principalement en français et en anglais, la pratique de l'anglais courant écrit et oral est nécessaire, celle du français est indispensable.",
+            ],
+          },
+        description: "description",
+        avantage: "avantage",
+        presentations: "presentations",
+        ComptabilityText: "compatible",
+        Pasdetélétravail:" Pas de télétravail",
+        finance: 'finance',
+        pariteMen: '35',
+        pariteWomen: '65',
+        lastOpportunity: "derniere oportunite",
+        jobHistory: "calcul le trajet",
+        contractType: "stage",
+        remotePolicy: "pas de télétravail",
+        experience: "< 1 an",
+        presentation: "Présentation",
+        coverImage: "/image/bic.png",
+        logoImage: "/image/bic.png",
+        industry: "Commerce de gros",
+        location: "Nanterre, France",
+        street: "1 Rue de Hanovre, 92290 Châtenay-Malabry, France",
+        numberEmployees: "10",
+        offersCount: 3,
+        Localisation:"Localisation",
+        presentationLast: "Faire partie de nos équipes, c'est avant tout assumer sa singularité et oser partager ses idées, dans une ambiance de travail que nous vous invitons à découvrir.",
+        serieuxMetier: "Nous faisons des métiers sérieux... sans se prendre au sérieux.",
+        collaborationText: "Avec + de 40 000 collaborateurs présents dans une centaine de pays, nous faisons partie du Top 10 des cabinets mondiaux.",
+        group: "Forvis Mazars est un groupe international",
+        conseilFacility: "audit, de fiscalité et de conseil",
+        creation: "1945",
+        bureau: "1 Rue de Hanovre, 92290 Châtenay-Malabry, France",
+        langue: "🇫🇷 Français",
+        collaborateurs: ">1000",
+        ageMoyen: "28 ans",
+        lastJobs: "Derniers jobs",
+        seeOffers: "Voir les dernières offres",
+        jobs: [
+  
+            { jobId:1,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:2,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:3,
+                title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+        ],
+       jobsnew: [
+  
+            { jobId:1,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:2,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:3,
+                title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+        ],
+    },
+    {
+        id: 9,
+        fonction:{
+            fonction: "Conseil",
+            contrat: "Stage",
+            politiqueTeletravail: "Pas de télétravail",
+            experience: "< 1 an"
+          },
+        name: "Pennylane",
+     
+        options:{
+            conseil:    "conseil",
+            financeAssurance:  "finance / assurance",
+            comptability:'Comptabilité / Gestion',
+            fiscaliteJuridique: "fiscalite / juridique",
+            ITTechProduit:"IT / Tech / Produit",
+            MarketingCommunication :  "Marketing / Communication ",
+            MediaEdition: "Media / Edition",
+            Digital:"/ Digital",
+           rh:  "Ressources humaines",
+           ServiceRelationclients: "Service & Relation clients",
+        },
+         stagiaire: {
+  title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+  details: {
+    type: "CDI",
+    location: "Honguemare-Guenouville, France",
+    diploma: "Sans diplôme",
+    experience: "< 1 an",
+    workTime: "Temps partiel",
+    remotePolicy: "Pas de télétravail"
+  }
+},
+     parville:[
+        { name: "France", jobs: "382 jobs" },
+        { name: "Maroc", jobs: "4 jobs" },
+        { name: "Martinique", jobs: "2 jobs" },
+        { name: "Chili", jobs: "1 job" },
+        { name: "Nouvelle-Calédonie", jobs: "1 job" },
+     ],
+        calcul:"Calculer le temps de trajet",
+        contratType:{
+            Alternance:"Alternance",
+            CDI: "CDI",
+            CDD:  "CDD",
+            professionalité:  "professionalité",
+            Stage:  "Stage",
+        },
+        whoAreWe: {
+            title: "Qui sommes-nous?",
+            content: `Forvis Mazars est un groupe international d'audit, de fiscalité et
+                      de conseil. Avec + de 40 000 collaborateurs présents dans une
+                      centaine de pays, nous faisons partie du Top 10 des cabinets
+                      mondiaux. Nous faisons des métiers sérieux... sans se prendre au
+                      sérieux. Faire partie de nos équipes, c'est avant tout assumer sa
+                      singularité et oser partager ses idées, dans une ambiance de
+                      travail que nous vous invitons à découvrir. Si vous souhaitez
+                      construire votre propre parcours et que vous aimez entreprendre,
+                      vous êtes au bon endroit!`,
+          },
+          jobDescription: {
+            title: "Description du poste",
+            content: `Dans le cadre du développement de ses activités, le département,
+                      Forensic Investigation Services de Forvis Mazars accueille des
+                      stagiaires ayant vocation à être pleinement intégrés au sein de
+                      ses équipes opérationnelles. Vous rejoindrez notre équipe Forensic
+                      Investigation et Litigation en pleine croissance...`, // Shortened for brevity
+          },
+          advantages: {
+            title: "Avantages",
+            items: [
+              "Étudiant(e) en Master (bac+5) d'école d'ingénieurs, de commerce ou universitaire de premier rang, vous complétez idéalement ce cursus par une spécialisation comptable ou financière.",
+              "Vous avez de fortes capacités analytiques et êtes à l'aise avec les chiffres et informations financières.",
+              "Vous avez de très bonnes capacités rédactionnelles.",
+              "Vous avez un esprit critique, êtes intellectuellement curieux(se) et particulièrement rigoureux(se).",
+              "Vous êtes capable de travailler à la fois de manière autonome et en équipe.",
+              "Nos missions se déroulant principalement en français et en anglais, la pratique de l'anglais courant écrit et oral est nécessaire, celle du français est indispensable.",
+            ],
+          },
+        description: "description",
+        avantage: "avantage",
+        presentations: "presentations",
+        ComptabilityText: "compatible",
+        Pasdetélétravail:" Pas de télétravail",
+        finance: 'finance',
+        pariteMen: '35',
+        pariteWomen: '65',
+        lastOpportunity: "derniere oportunite",
+        jobHistory: "calcul le trajet",
+        contractType: "stage",
+        remotePolicy: "pas de télétravail",
+        experience: "< 1 an",
+        presentation: "Présentation",
+        coverImage: "/image/penn.png",
+        logoImage: "/image/penn_00.png",
+        industry: "Commerce de gros",
+        location: "Nanterre, France",
+        street: "1 Rue de Hanovre, 92290 Châtenay-Malabry, France",
+        numberEmployees: "10",
+        offersCount: 3,
+        Localisation:"Localisation",
+        presentationLast: "Faire partie de nos équipes, c'est avant tout assumer sa singularité et oser partager ses idées, dans une ambiance de travail que nous vous invitons à découvrir.",
+        serieuxMetier: "Nous faisons des métiers sérieux... sans se prendre au sérieux.",
+        collaborationText: "Avec + de 40 000 collaborateurs présents dans une centaine de pays, nous faisons partie du Top 10 des cabinets mondiaux.",
+        group: "Forvis Mazars est un groupe international",
+        conseilFacility: "audit, de fiscalité et de conseil",
+        creation: "1945",
+        bureau: "1 Rue de Hanovre, 92290 Châtenay-Malabry, France",
+        langue: "🇫🇷 Français",
+        collaborateurs: ">1000",
+        ageMoyen: "28 ans",
+        lastJobs: "Derniers jobs",
+        seeOffers: "Voir les dernières offres",
+        jobs: [
+  
+            { jobId:1,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:2,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:3,
+                title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+        ],
+       jobsnew: [
+  
+            { jobId:1,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:2,
+                title: "Equipier Polyvalent Etudiant (H/F)",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+            {
+                jobId:3,
+                title: "Stagiaire - Consultant Forensic, Investigation et Litigation - 2024 - H/F",
+                location: "Honguemare-Guenouville, France",
+                contractType: "CDI",
+                diploma: "Sans diplôme",
+                experience: "< 1 an",
+                workTime: "Temps partiel",
+                remote: "Pas de télétravail",
+            },
+        ],
     },
 ];
 

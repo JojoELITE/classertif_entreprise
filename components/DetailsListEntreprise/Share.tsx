@@ -7,8 +7,8 @@ import { HiOutlineMailOpen } from "react-icons/hi";
 
 export default function Share() {
   return (
-    <div className=" w-full  rounded border  py-5">
-      <div className="flex flex-col gap-3">
+    <div className=" w-full  rounded border   py-5">
+      <div className="flex flex-col sm:w-full sm:items-center gap-3">
         <h1 className="text-center">Partager  l&apos;offre d&apos;emploi</h1>
         <div className="flex gap-3 justify-center">
           <div className="flex items-center justify-center p-2">
