@@ -60,7 +60,7 @@ export default function Navbar() {
         </ul>
       </div>
      
-      <div style={{ width: "31%" }}>
+      <div style={{ width: "34%" }}>
         <div className="hidden md:flex md:items-center md:justify-center p-4 border rounded font-bold bg-[#472df1] gap-2 text-white py-2">
           <button>Postuler</button>
           <RiShareBoxFill />

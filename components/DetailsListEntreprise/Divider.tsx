@@ -40,7 +40,7 @@ export default function Divider() {
         </div>
 
         {/* First CardGeo visible on small screens only */}
-        <div className="flex items-center sm:block md:hidden justify-center p-5">
+        <div className="flex items-center sm:block md:hidden justify-center ">
           <CardGeo />
         </div>
         
@@ -55,7 +55,7 @@ export default function Divider() {
           <Card1 />
         </div>
 
-        {/* Second Localisation section */}
+        
         <div className="py-5 hidden md:flex justify-between">
           <div className="flex items-center gap-1">
             <h1 className="font-extrabold text-xl">{enterprise.location}</h1>
@@ -69,14 +69,14 @@ export default function Divider() {
           </div>
         </div>
 
-        {/* Second CardGeo visible on medium and larger screens */}
+        
         <div className="hidden md:flex items-center justify-center p-5">
           <CardGeo />
         </div>
 
-        <div className="hidden md:flex justify-between items-center">
-          <span>{enterprise.street}</span>
-          <button className="flex items-center underline text-blue-800 gap-2">
+        <div className="hidden md:flex justify-between  items-center">
+          <span className=" text-xs ">{enterprise.street}</span>
+          <button className="flex items-center  underline text-blue-800 gap-2">
             <FaClock color="blue" />
             {enterprise.jobHistory}
           </button>

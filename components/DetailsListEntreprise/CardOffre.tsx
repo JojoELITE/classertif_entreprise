@@ -5,7 +5,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { IoMdTime } from "react-icons/io";
 import { BriefcaseBusiness, GraduationCap, Tag } from "lucide-react";
 import { IoMdGlobe } from "react-icons/io";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import enterprisesData from "@/components/data/data";
 
 interface CardProps {
@@ -82,7 +82,7 @@ const Card: React.FC<CardProps> = ({
 
 const JobCards: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const router = useRouter();
+  // const router = useRouter();
   const [number, setNumber] = useState<string | undefined>(undefined);
 
   useEffect(() => {
@@ -91,18 +91,18 @@ const JobCards: React.FC = () => {
     }
   }, [id]);
 
-  // Fetch the enterprise corresponding to the ID
+ 
   const enterprise = enterprisesData.enterprisesData.find(ent => ent.id.toString() === number);
 
-  // Check if the enterprise exists
+ 
   if (!enterprise) {
     return <div>Entreprise non trouvée</div>;
   }
 
-  // Navigate to job details using the enterprise id
+
   const handleNavigation = () => {
     if (number) {
-      router.push(`/detailsJob/${number}`); // Use the id from useParams
+      window.location.href =`/detailsJob/${number}`; 
     }
   };
 
@@ -111,7 +111,7 @@ const JobCards: React.FC = () => {
       {enterprise.jobsnew.map((job, index) => (
         <Card
           key={index}
-          onClick={handleNavigation} // Use the handleNavigation directly
+          onClick={handleNavigation}
           jobTitle={job.title}
           location={job.location}
           contractType={job.contractType}
@@ -124,6 +124,4 @@ const JobCards: React.FC = () => {
     </>
   );
 };
-
-// Default export for JobCards
 export default JobCards;

@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import enterprisesData from "@/components/data/data"; 
 import { FaAngleRight } from "react-icons/fa6";
 
+
 export default function RechecheContrat() {
 
   // Move hooks to the top level of the component
