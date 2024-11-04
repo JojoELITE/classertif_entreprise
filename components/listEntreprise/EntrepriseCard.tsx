@@ -1,5 +1,3 @@
-// EnterpriseCards.tsx
-
 "use client";
 
 import React, { useState } from 'react';
@@ -9,186 +7,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Switch } from "@/components/ui/switch";
 import { MapPin } from 'lucide-react';
-
-interface EnterpriseData {
-  id: number;
-  name: string;
-  coverImage: string;
-  logoImage: string;
-  industry: string;
-  location: string;
-  numberEmployees: string;
-  offersCount: number;
-  date: string;
-}
-
-const enterprisesData: EnterpriseData[] = [
-  {
-    id: 1,
-    name: "METRO France (Les halles METRO)",
-    coverImage: "/image/metro_00.png",
-    logoImage: "/image/metro_00.png",
-    industry: "Commerce de gros",
-    location: "Nanterre, France",
-    numberEmployees: "1000",
-    offersCount: 3,
-    date: "2024-10-31", 
-  },
-  {
-    id: 2,
-    name: "Lidl France",
-    coverImage: "/image/lidl_00.png",
-    logoImage: "/image/lidl_00.png",
-    industry: "Grande distribution",
-    location: "1 Rue de Hanovre",
-    numberEmployees: "",
-    offersCount: 25,
-    date: "2024-10-30", 
-  },
-  {
-    id: 3,
-    name: "Mazars",
-    coverImage: "/image/Mazars.png",
-    logoImage: "/image/Mazars_00.png",
-    industry: "Conseil",
-    location: "Courbevoie",
-    numberEmployees: "1000",
-    offersCount: 388,
-    date: "2024-10-29", 
-  },
-  {
-    id: 4,
-    name: "L'Oréal Groupe",
-    coverImage: "/image/oréal.png",
-    logoImage: "/image/oréal_00.png",
-    industry: "Cosmétique",
-    location: "Clichy, France",
-    numberEmployees: "",
-    offersCount: 5,
-    date: "2024-10-31", 
-  },
-  {
-    id: 5,
-    name: "ABYLSEN",
-    coverImage: "/image/abylsen_00.png",
-    logoImage: "/image/abylsen.png",
-    industry: "Industrie",
-    location: "Paris, France",
-    numberEmployees: "1000",
-    offersCount: 3,
-    date: "2024-10-31", 
-  },
-  {
-    id: 6,
-    name: "BRUNEAU",
-    coverImage: "/image/bruneau.png",
-    logoImage: "/image/bruneau.png",
-    industry: "Fournitures de bureau",
-    location: "Villebon-sur-Yvette",
-    numberEmployees: "",
-    offersCount: 2,
-    date: "2024-10-30", 
-  },
-  {
-    id: 7,
-    name: "Grant Thornton",
-    coverImage: "/image/grant.png",
-    logoImage: "/image/grant_00.png",
-    industry: "Conseil",
-    location: "Paris, France",
-    numberEmployees: "",
-    offersCount: 4,
-    date: "2024-11-02", 
-  },
-  {
-    id: 8,
-    name: "BIC",
-    coverImage: "/image/bic.png",
-    logoImage: "/image/bic_00.png",
-    industry: "Industrie",
-    location: "Clichy, France",
-    numberEmployees: "1000",
-    offersCount: 2,
-    date: "2024-10-31", 
-  },
-  {
-    id: 9,
-    name: "Pennylane",
-    coverImage: "/image/penn.png",
-    logoImage: "/image/penn_00.png",
-    industry: "Services financiers",
-    location: "",
-    numberEmployees: "",
-    offersCount: 2,
-    date: "2024-10-30", 
-  },
-  // {
-  //   id: 10,
-  //   name: "Capgemini",
-  //   coverImage: "/image/capgemini.png",
-  //   logoImage: "/image/capgemini_logo.png",
-  //   industry: "Technologie",
-  //   location: "Paris, France",
-  //   numberEmployees: "5000",
-  //   offersCount: 12,
-  //   date: "2024-10-31", 
-  // },
-  // {
-  //   id: 11,
-  //   name: "Air France",
-  //   coverImage: "/image/airfrance.png",
-  //   logoImage: "/image/airfrance_logo.png",
-  //   industry: "Transport",
-  //   location: "Roissy-en-France, France",
-  //   numberEmployees: "30000",
-  //   offersCount: 15,
-  //   date: "2024-10-30", 
-  // },
-  // {
-  //   id: 12,
-  //   name: "BNP Paribas",
-  //   coverImage: "/image/bnp.png",
-  //   logoImage: "/image/bnp_logo.png",
-  //   industry: "Banque",
-  //   location: "Paris, France",
-  //   numberEmployees: "100000",
-  //   offersCount: 20,
-  //   date: "2024-10-29", 
-  // },
-  // {
-  //   id: 13,
-  //   name: "Orange",
-  //   coverImage: "/image/orange.png",
-  //   logoImage: "/image/orange_logo.png",
-  //   industry: "Télécommunications",
-  //   location: "Paris, France",
-  //   numberEmployees: "50000",
-  //   offersCount: 10,
-  //   date: "2024-10-31", 
-  // },
-  // {
-  //   id: 14,
-  //   name: "Danone",
-  //   coverImage: "/image/danone.png",
-  //   logoImage: "/image/danone_logo.png",
-  //   industry: "Agroalimentaire",
-  //   location: "Paris, France",
-  //   numberEmployees: "10000",
-  //   offersCount: 8,
-  //   date: "2024-10-30", 
-  // },
-  // {
-  //   id: 15,
-  //   name: "TotalEnergies",
-  //   coverImage: "/image/total.png",
-  //   logoImage: "/image/total_logo.png",
-  //   industry: "Énergie",
-  //   location: "La Défense, France",
-  //   numberEmployees: "10000",
-  //   offersCount: 6,
-  //   date: "2024-10-31", 
-  // },
-];
+import enterprisesData from "@/components/data/data";
 
 const icons = {
   industry: (
@@ -203,10 +22,17 @@ const icons = {
   ),
 };
 
-function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
+function EnterpriseCard({ enterprise }:any) {
   const handleClick = () => {
     window.location.href = `/details/${enterprise.id}`;
   };
+
+  // const handleClick = () => {
+  //   const randomNum = Math.floor(Math.random() * 10000); 
+  //   window.location.href = `/details/${enterprise.id}?rand=${randomNum}`;
+  // };
+  
+
   return (
     <Card onClick={handleClick} className="bg-white shadow-sm rounded-xl hover:shadow-lg overflow-hidden border border-gray-200 flex flex-col">
       <CardHeader className="p-0 relative">
@@ -243,9 +69,6 @@ function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
                 &gt; {enterprise.numberEmployees}
               </div>
             )}
-            {/* <div className="text-sm text-gray-500 mt-2">
-              {new Date(enterprise.date).toLocaleDateString()}
-            </div> */}
           </div>
         </Link>
       </CardContent>
@@ -259,7 +82,6 @@ function EnterpriseCard({ enterprise }: { enterprise: EnterpriseData }) {
   );
 }
 
-// Define props interface to accept searchQuery
 interface EnterpriseCardsProps {
   searchQuery: string;
 }
@@ -280,16 +102,17 @@ export default function EnterpriseCards({ searchQuery }: EnterpriseCardsProps) {
   const handleSwitchToggle = () => {
     setShowToday((prev) => !prev);
   };
-  const filteredEnterprises = enterprisesData.filter(enterprise => {
+
+  const filteredEnterprises = enterprisesData.enterprisesData.filter(enterprise => {
     const matchesDate = showToday 
       ? enterprise.date === new Date().toISOString().split('T')[0]
       : true;
-  
+
     const matchesSearch = !searchQuery || (enterprise.name && enterprise.name.toLowerCase().includes(searchQuery.toLowerCase()));
-  
+
     return matchesDate && matchesSearch;
   });
-  
+
   return (
     <div className="w-full px-4 lg:px-10 py-[26%] lg:py-0">
       <div className="flex w-full flex-row flex-wrap items-center justify-between mb-8">

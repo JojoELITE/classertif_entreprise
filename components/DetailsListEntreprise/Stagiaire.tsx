@@ -11,6 +11,7 @@ import Share from "@/components/DetailsListEntreprise/Share";
 import Navbar from "./Navbar";
 import { FaAngleLeft } from "react-icons/fa";
 import JobInfo from "./JobInfo";
+import SegondImage from "./SegondImage";
 
 export default function Stagiaire() {
   const { id } = useParams();
@@ -63,7 +64,7 @@ export default function Stagiaire() {
               {enterprise.jobDescription.title}
             </h1>
             <p className="py-9 px-6">{enterprise.jobDescription.content}</p>
-            <ul className="px-12 flex flex-col gap-4 w-full"></ul>
+            {/* <ul className="px-12 flex flex-col gap-4 w-full"></ul> */}
           </div>
 
           <div className="pt-5">
@@ -88,6 +89,10 @@ export default function Stagiaire() {
           </div>
           <div className=" flex-col gap-2 py-7">
             <JobInfo />
+           <div className="  pt-10 ">
+            <span className="py-12"> Decouvrez-nous</span>
+           <SegondImage/>
+           </div>
             <Information />
           </div>
 

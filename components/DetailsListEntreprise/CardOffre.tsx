@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({
   return (
     <div 
       onClick={onClick} 
-      className="group cursor-pointer flex p-5 hover:text-blue-400 justify-between border rounded h-full font-extrabold text-[#333333] lg:p-3 w-full"
+      className="group cursor-pointer flex hover:border-blue-400 p-5 hover:text-blue-400 justify-between border rounded h-full font-extrabold text-[#333333] lg:p-3 w-full"
     >
       <div className="flex flex-col sm:flex-col md:flex-row">
         <div className="flex items-center justify-center gap-9">
@@ -41,7 +41,7 @@ const Card: React.FC<CardProps> = ({
             <div className="flex flex-col md:flex-row gap-3 mt-4">
               <div className="flex gap-3">
                 <button className="bg-[#f4f4f4] group-hover:bg-blue-200 text-xs flex gap-1 items-center justify-center px-2">
-                  <Tag size={15} color="grey" />
+                  <Tag size={15} color="grey"  />
                   {contractType}
                 </button>
                 <button className="bg-[#f4f4f4] group-hover:bg-blue-200 gap-2 border text-nowrap text-xs flex items-center justify-center px-2">
@@ -82,7 +82,6 @@ const Card: React.FC<CardProps> = ({
 
 const JobCards: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  // const router = useRouter();
   const [number, setNumber] = useState<string | undefined>(undefined);
 
   useEffect(() => {
@@ -91,23 +90,24 @@ const JobCards: React.FC = () => {
     }
   }, [id]);
 
- 
   const enterprise = enterprisesData.enterprisesData.find(ent => ent.id.toString() === number);
 
- 
   if (!enterprise) {
     return <div>Entreprise non trouvée</div>;
   }
 
-
   const handleNavigation = () => {
     if (number) {
-      window.location.href =`/detailsJob/${number}`; 
+      window.location.href = `/detailsJob/${number}`; 
     }
   };
 
   return (
     <>
+     <div className="h-7 w-32  text-nowrap bg-blue-200 mb-4 text-xs border justify-center text-blue-600 border-blue-300 rounded flex items-center">
+  {enterprise.jobsnew.length} offres disponibles
+</div>
+
       {enterprise.jobsnew.map((job, index) => (
         <Card
           key={index}
@@ -124,4 +124,5 @@ const JobCards: React.FC = () => {
     </>
   );
 };
+
 export default JobCards;
