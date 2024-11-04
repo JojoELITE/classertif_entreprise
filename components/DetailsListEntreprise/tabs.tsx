@@ -1,18 +1,32 @@
 "use client";
 import { useState } from "react";
+import enterprisesData from "@/components/data/data";
+import { useParams } from "next/navigation";
 
-const Tableau = [
-    { info: 'Présentation', link: 'Présentation' },
-    { info: 'Offres d’emploi', link: 'Offres', count: 390 },
-];
-
-
-interface TabsProps {
-    onSelect: (link: string) => void; 
+// Define an interface for the toggle items
+interface ToggleItem {
+    info: string;
+    link: string;
+    count?: number | null;
 }
 
-const Tabs: React.FC<TabsProps> = ({ onSelect }) => {
+interface Enterprise {
+    id: number;
+    toggle: ToggleItem[];
+}
+
+const Tabs: React.FC<{ onSelect: (link: string) => void }> = ({ onSelect }) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
+    const { id } = useParams();
+    
+    // Find the enterprise by id
+    const enterprise = enterprisesData.enterprisesData.find((ent: Enterprise) => ent.id.toString() === id);
+
+    if (!enterprise) {
+        return <div>Enterprise not found</div>; 
+    }
+
+    const { toggle } = enterprise;
 
     const handleClick = (index: number, link: string) => {
         setSelectedIndex(index);
@@ -20,18 +34,22 @@ const Tabs: React.FC<TabsProps> = ({ onSelect }) => {
     };
 
     return (
-        <div className='w-full  top-20 lg:px-14'>
+        <div className='w-full top-20 lg:px-14'>
             <div className='flex gap-[11px]'>
-                {Tableau.map((item, index) => (
+                {toggle.map((item: ToggleItem, index: number) => (
                     <div
                         key={index}
-                        className={`relative flex text-nowrap cursor-pointer py-4 px-4 ${selectedIndex === index ? "text-[#472df1] font-bold" : "text-gray-500"}`}
+                        className={`relative flex text-nowrap cursor-pointer py-4 px-4 ${
+                            selectedIndex === index ? "text-[#472df1] font-bold" : "text-gray-500"
+                        }`}
                         onClick={() => handleClick(index, item.link)}
                     >
                         <div className="flex gap-4 items-center justify-center">
                             {item.info}
-                            {item.count !== undefined && (
-                                <div className={`rounded px-2 ${selectedIndex === index ? "bg-[#dee2ff] text-[#8e84f9]" : "bg-gray-300"} text-white`}>
+                            {item.count !== undefined && item.count !== null && (
+                                <div className={`rounded px-2 ${
+                                    selectedIndex === index ? "bg-[#dee2ff] text-[#8e84f9]" : "bg-gray-300"
+                                } text-white`}>
                                     {item.count}
                                 </div>
                             )}
@@ -46,7 +64,5 @@ const Tabs: React.FC<TabsProps> = ({ onSelect }) => {
         </div>
     );
 };
-
-
 
 export default Tabs;

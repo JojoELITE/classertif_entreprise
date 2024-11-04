@@ -57,12 +57,12 @@ export default function Divider() {
 
         
         <div className="py-5 hidden md:flex justify-between">
-          <div className="flex items-center gap-1">
-            <h1 className="font-extrabold text-xl">{enterprise.location}</h1>
+          <div className="flex items-center  gap-1">
+            <h1 className="font-extrabold text-xs ">{enterprise.location}</h1>
             <IoPinOutline />
           </div>
           <div className="flex gap-5 items-center">
-            <span className="text-xs text-black">
+            <span className="text-xs pl-9 text-black">
               {enterprise.street}
             </span>
             <FaAngleDown color="grey" />
@@ -76,7 +76,7 @@ export default function Divider() {
 
         <div className="hidden md:flex justify-between  items-center">
           <span className=" text-xs ">{enterprise.street}</span>
-          <button className="flex items-center  underline text-blue-800 gap-2">
+          <button className="flex items-center  text-nowrap underline text-blue-800 gap-2">
             <FaClock color="blue" />
             {enterprise.jobHistory}
           </button>

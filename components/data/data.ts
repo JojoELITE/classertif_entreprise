@@ -1,7 +1,14 @@
 const enterprisesData = [
     {
         id: 1,
+        toggle: [
+            { info: 'Présentation', link: 'Présentation',},
+            { info: 'Offres d’emploi', link: 'Offres',   },
+            // Add more entries as needed
+        ],
+          
         name: "METRO France (Les halles METRO)",
+        date: "2024-10-30", 
         options:{
             conseil:    "conseil",
             financeAssurance:  "finance / assurance",
@@ -179,6 +186,13 @@ const enterprisesData = [
     
     {
         id: 2,
+
+     toggle: [
+            { info: 'Présentation', link: 'Présentation' },
+            { info: 'Offres d’emploi', link: 'Offres', },
+            // Add more entries as needed
+        ],
+        date: "2024-10-30", 
         parville:[
             { name: "France", jobs: "382 jobs" },
             { name: "Maroc", jobs: "4 jobs" },
@@ -342,6 +356,13 @@ const enterprisesData = [
     
     {
         id: 3,
+
+     toggle: [
+            { info: 'Présentation', link: 'Présentation',  },
+            { info: 'Offres d’emploi', link: 'Offres', count: 590},
+            // Add more entries as needed
+        ],
+        date: "2024-10-30", 
         fonction:{
             fonction: "Conseil",
             contrat: "Stage",
@@ -494,6 +515,13 @@ const enterprisesData = [
     },
     {
         id: 4,
+
+     toggle: [
+            { info: 'Présentation', link: 'Présentation',  },
+            { info: 'Offres d’emploi', link: 'Offres', count: 390},
+            // Add more entries as needed
+        ],
+        date: "2024-10-30", 
         fonction:{
             fonction: "Conseil",
             contrat: "Stage",
@@ -647,6 +675,13 @@ const enterprisesData = [
     },
     {
         id: 5,
+
+     toggle: [
+            { info: 'Présentation', link: 'Présentation',  },
+            { info: 'Offres d’emploi', link: 'Offres', count: 390},
+            // Add more entries as needed
+        ],
+        date: "2024-10-30", 
         fonction:{
             fonction: "Conseil",
             contrat: "Stage",
@@ -825,6 +860,13 @@ const enterprisesData = [
     },
     {
         id: 6,
+
+     toggle: [
+            { info: 'Présentation', link: 'Présentation',  },
+            { info: 'Offres d’emploi', link: 'Offres', count: 390},
+            // Add more entries as needed
+        ],
+        date: "2024-10-30", 
         fonction:{
             fonction: "Conseil",
             contrat: "Stage",
@@ -1004,6 +1046,13 @@ const enterprisesData = [
     
     {
         id: 7,
+
+     toggle: [
+            { info: 'Présentation', link: 'Présentation',  },
+            { info: 'Offres d’emploi', link: 'Offres', count: 390},
+            // Add more entries as needed
+        ],
+        date: "2024-10-30", 
         fonction:{
             fonction: "Conseil",
             contrat: "Stage",
@@ -1068,7 +1117,7 @@ const enterprisesData = [
                       Forensic Investigation Services de Forvis Mazars accueille des
                       stagiaires ayant vocation à être pleinement intégrés au sein de
                       ses équipes opérationnelles. Vous rejoindrez notre équipe Forensic
-                      Investigation et Litigation en pleine croissance...`, // Shortened for brevity
+                      Investigation et Litigation en pleine croissance...`,
           },
           advantages: {
             title: "Avantages",
@@ -1182,6 +1231,13 @@ const enterprisesData = [
     },
     {
         id: 8,
+
+     toggle: [
+            { info: 'Présentation', link: 'Présentation',  },
+            { info: 'Offres d’emploi', link: 'Offres', count: 390},
+            // Add more entries as needed
+        ],
+        date: "2024-10-30", 
         fonction:{
             fonction: "Conseil",
             contrat: "Stage",
@@ -1360,6 +1416,13 @@ const enterprisesData = [
     },
     {
         id: 9,
+
+      toggle: [
+            { info: 'Présentation', link: 'Présentation',  },
+            { info: 'Offres d’emploi', link: 'Offres', count: 390},
+            // Add more entries as needed
+        ],
+        date: "2024-11-03", 
         fonction:{
             fonction: "Conseil",
             contrat: "Stage",
